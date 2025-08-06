@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclectic</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #222222;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .logo-container {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* Tagline Animation Styles */
+        .tagline {
+            position: relative;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .tagline-text {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .tagline-char {
+            display: inline-block;
+            position: relative;
+            transform-origin: bottom center;
+            animation: snakeWave 3s infinite ease-in-out;
+        }
+        
+        .tagline-char.space {
+            width: 0.3em;
+        }
+
+        @keyframes snakeWave {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-5px) rotate(2deg);
+            }
+            50% {
+                transform: translateY(0) rotate(0deg);
+            }
+            75% {
+                transform: translateY(5px) rotate(-2deg);
+            }
+        }
+
+        /* Tab Styles */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #222222;
+            padding: 0;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .tab-btn:hover {
+            background-color: #444444;
+        }
+        
+        .tab-btn.active {
+            background-color: #ffffff;
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        /* Tab Content Styles */
+        .tab-content {
+            display: none;
+            padding: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Short Stories Tab Styles */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .story-card {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            border-color: #aaaaaa;
+        }
+        
+        .story-card-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .story-card-content {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .story-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #dddddd;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .story-card:hover .story-image {
+            filter: grayscale(0%);
+        }
+        
+        .story-title {
+            padding: 1.2rem 1.2rem 0.8rem;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #000000;
+        }
+
+        .story-preview {
+            padding: 0 1.2rem;
+            font-size: 0.92rem;
+            color: #555555;
+            text-align: center;
+            flex-grow: 1;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .read-more {
+            display: block;
+            text-align: center;
+            padding: 0.85rem;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-top: 1px solid #dddddd;
+            pointer-events: auto;
+            position: relative;
+            z-index: 3;
+        }
+
+        .read-more:hover {
+            background-color: #222222;
+        }
+        
+        /* About Tab Styles */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+            color: #000000;
+            font-size: 1.8rem;
+        }
+
+        .substack-link {
+            display: inline-block;
+            margin: 1.5rem 0;
+            padding: 1rem 2rem;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid #000000;
+        }
+
+        .substack-link:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background-color: #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #dddddd;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+            color: #000000;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: bold;
+            color: #333333;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #999999;
+            background-color: #ffffff;
+        }
+        
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        button[type="submit"] {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            border: 1px solid #000000;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid #dddddd;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .tab-content {
+                padding: 1.5rem;
+            }
+            
+            .stories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://substackcdn.com/image/fetch/$s_!yWFe!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8174c042-510d-4496-8c05-fe7ff38a30f9_1344x256.png" 
+                 alt="Eclectic Logo" 
+                 style="height: 72px; width: 417px; max-width: 100%;">
+        </div>
+        <div class="tagline">
+            <span class="tagline-text" id="animatedTagline"></span>
+        </div>
+    </header>
+    
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="stories">SHORT STORIES</button>
+        <button class="tab-btn" data-tab="about">ABOUT</button>
+    </div>
+    
+    <div id="stories" class="tab-content active">
+        <h2 style="text-align: center; margin-bottom: 1.5rem; color: #000000;">SHORT STORIES</h2>
+        <p style="text-align: center; color: #555555; max-width: 700px; margin: 0 auto 2rem;">Click on a story card to read it.</p>
+        
+        <div class="stories-grid">
+            <div class="story-card">
+                <a href="story_1.html" class="story-card-link"></a>
+                <div class="story-card-content">
+                    <img src="https://substackcdn.com/image/fetch/$s_!i612!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe40bc51a-1979-4371-8970-9eb0863b6692_1280x970.jpeg" alt="Volta" class="story-image">
+                    <div class="story-title">VOLTA</div>
+                    <div class="story-preview">
+                        <p>Unexpectedly and with a tremendous peal, the bomb had detonated along a teeming promenade café. The dense column of smoke sprawled high into the evening sky—some great blossoming on this cruel April day...</p>
+                    </div>
+                    <a href="story_1.html" class="read-more">READ MORE</a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <a href="story_2.html" class="story-card-link"></a>
+                <div class="story-card-content">
+                    <img src="https://substackcdn.com/image/fetch/$s_!okOL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad46cc41-bee9-44d5-939d-8aeee126e5c0_1200x782.jpeg" alt="Mud" class="story-image">
+                    <div class="story-title">MUD</div>
+                    <div class="story-preview">
+                        <p>A darkened gradient stretched across the sky on this innumerable day. The whistle reverberated throughout the network of trenches; its tinny resolve linked other whistles in an invisible, yet audible web...</p>
+                    </div>
+                    <a href="story_2.html" class="read-more">READ MORE</a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <a href="story_3.html" class="story-card-link"></a>
+                <div class="story-card-content">
+                    <img src="https://substackcdn.com/image/fetch/$s_!G9r_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2383fb-dc94-4c4d-b0ec-0dcd007df667_4980x2800.jpeg" alt="Silver and Coal" class="story-image">
+                    <div class="story-title">SILVER AND COAL</div>
+                    <div class="story-preview">
+                        <p>At Noon on the 23rd of April in the Year 1778, the American Sloop-of-War, the Ranger, sailed into the Soloway Firth, riding uneasily at Anchor off St. Mary's Isle—a peninsula and the Ancient seat of the Douglas family, its sole inhabitants...</p>
+                    </div>
+                    <a href="story_3.html" class="read-more">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about" class="tab-content">
+        <div class="about-content">
+            <h2>ABOUT ECLECTIC</h2>
+            <p>Eclectic is a small, one-man operation; a publication of anything and everything. Eclectic yearns to be the home of the passionate, publishing material that is well-written, well-researched, and overall neglected or too archaic, labyrinthine, obsessive, and even grotesque or avant-garde. We find interest in the gritty, the unknown, the unknowable.</p>
+
+            <p>If you have a penchant to tell a story with obsessive and meticulous detail, Eclectic may just be the home for your work.</p>
+            
+            <p>For more stories and regular updates, subscribe to our Substack newsletter:</p>
+            
+            <a href="https://eclecticmag.substack.com" class="substack-link" target="_blank">VISIT ECLECTIC ON SUBSTACK</a>
+            
+            <div class="contact-form">
+                <h3>CONTACT US</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">NAME:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">EMAIL:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">MESSAGE:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 ECLECTIC. ALL RIGHTS RESERVED.</p>
+    </footer>
+    
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Update active tab button
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Update active tab content
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Contact form functionality
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            alert(`Thank you, ${name}! Your message has been sent. We'll respond to ${email} as soon as possible.`);
+            
+            contactForm.reset();
+        });
+
+        // Tagline Animation Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const tagline = "One Thing Leads To Another. Everything Is Connected.";
+            const container = document.getElementById('animatedTagline');
+            
+            // Split text into characters and wrap each in a span
+            tagline.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.className = char === ' ' ? 'tagline-char space' : 'tagline-char';
+                span.innerHTML = char === ' ' ? '&nbsp;' : char;
+                span.style.animationDelay = `${index * 0.1}s`;
+                container.appendChild(span);
+            });
+        });
+    </script>
+</body>
+</html>

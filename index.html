@@ -33,7 +33,7 @@
             margin: 0 auto;
         }
         
-        /* Tagline Animation Styles */
+        /* Tagline Animation Styles - Fixed */
         .tagline {
             position: relative;
             display: inline-block;
@@ -41,11 +41,11 @@
             font-style: italic;
             font-weight: bold;
             letter-spacing: 1px;
+            font-size: 1.1rem;
         }
         
         .tagline-text {
             display: inline-block;
-            position: relative;
         }
         
         .tagline-char {
@@ -350,8 +350,6 @@
                 padding: 1.5rem;
             }
         }
-		
-		
     </style>
 </head>
 <body>
@@ -427,9 +425,8 @@
             <a href="https://eclecticmag.substack.com" class="substack-link" target="_blank">VISIT ECLECTIC ON SUBSTACK</a>
             
             <div class="contact-form">
-			<form action ="https://formspree.io/f/xpwlongb" method="POST"> 
-                <h3>CONTACT US</h3>
-                <form id="contactForm">
+                <form action="https://formspree.io/f/xpwlongb" method="POST"> 
+                    <h3>CONTACT US</h3>
                     <div class="form-group">
                         <label for="name">NAME:</label>
                         <input type="text" id="name" name="name" required>
@@ -475,33 +472,40 @@
         });
         
         // Contact form functionality
-        const contactForm = document.getElementById('contactForm');
+        const contactForm = document.querySelector('.contact-form form');
         
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            alert(`Thank you, ${name}! Your message has been sent. We'll respond to ${email} as soon as possible.`);
-            
-            contactForm.reset();
-        });
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                alert(`Thank you, ${name}! Your message has been sent. We'll respond to ${email} as soon as possible.`);
+                
+                contactForm.reset();
+            });
+        }
 
-        // Tagline Animation Script
+        // Tagline Animation Script - Fixed
         document.addEventListener('DOMContentLoaded', function() {
             const tagline = "One Thing Leads To Another. Everything Is Connected.";
             const container = document.getElementById('animatedTagline');
             
-            // Split text into characters and wrap each in a span
-            tagline.split('').forEach((char, index) => {
-                const span = document.createElement('span');
-                span.className = char === ' ' ? 'tagline-char space' : 'tagline-char';
-                span.innerHTML = char === ' ' ? '&nbsp;' : char;
-                span.style.animationDelay = `${index * 0.1}s`;
-                container.appendChild(span);
-            });
+            if (container) {
+                // Clear any existing content
+                container.innerHTML = '';
+                
+                // Split text into characters and wrap each in a span
+                tagline.split('').forEach((char, index) => {
+                    const span = document.createElement('span');
+                    span.className = char === ' ' ? 'tagline-char space' : 'tagline-char';
+                    span.textContent = char === ' ' ? '\u00A0' : char;
+                    span.style.animationDelay = `${index * 0.1}s`;
+                    container.appendChild(span);
+                });
+            }
         });
     </script>
 </body>

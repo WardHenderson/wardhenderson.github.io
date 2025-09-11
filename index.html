@@ -3,51 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eclectic</title>
+    <title>Eclectic | One Thing Leads to Another. Everything is Connected.</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="Eclectic_logo_favicon.png">
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
+            font-family: 'EB Garamond', serif;
         }
         
         body {
-            background-color: #ffffff;
-            color: #222222;
+            background-color: #f8f8f8;
+            color: #333;
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
-        /* Header Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
         header {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 1.5rem 0;
-            text-align: center;
-            border-bottom: 1px solid #dddddd;
+            background-color: #fff;
+            color: #333;
+            padding: 25px 0 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid #eee;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .logo-container {
+            margin-bottom: 15px;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            max-width: 412px;
+            width: 100%;
+        }
+        
+        .logo-container img {
+            width: 100%;
+            height: auto;
             display: block;
-            margin: 0 auto;
         }
         
-        /* Tagline Animation Styles - Fixed */
-        .tagline {
+        /* Slogan styles */
+        .slogan {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            max-width: 600px;
+            line-height: 1.3;
+            font-weight: 600;
             position: relative;
-            display: inline-block;
-            margin-top: 0.5rem;
-            font-style: italic;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 1.1rem;
+            padding: 8px 0;
+            overflow: hidden;
+            min-height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .tagline-text {
+        .slogan-text {
             display: inline-block;
         }
         
+        /* Tagline Animation Styles */
         .tagline-char {
             display: inline-block;
             position: relative;
@@ -64,298 +100,383 @@
                 transform: translateY(0) rotate(0deg);
             }
             25% {
-                transform: translateY(-5px) rotate(2deg);
+                transform: translateY(-3px) rotate(2deg);
             }
             50% {
                 transform: translateY(0) rotate(0deg);
             }
             75% {
-                transform: translateY(5px) rotate(-2deg);
+                transform: translateY(3px) rotate(-2deg);
             }
         }
-
-        /* Tab Styles */
-        .tabs {
+        
+        /* Navigation styles */
+        nav ul {
             display: flex;
+            list-style: none;
+            flex-wrap: wrap;
             justify-content: center;
-            background-color: #222222;
-            padding: 0;
-            border-bottom: 1px solid #dddddd;
+            gap: 12px;
         }
         
-        .tab-btn {
-            padding: 1rem 2rem;
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
+        nav li {
+            margin: 0;
         }
         
-        .tab-btn:hover {
-            background-color: #444444;
-        }
-        
-        .tab-btn.active {
-            background-color: #ffffff;
-            color: #000000;
-            font-weight: bold;
-        }
-        
-        /* Tab Content Styles */
-        .tab-content {
-            display: none;
-            padding: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .tab-content.active {
+        nav a {
             display: block;
-        }
-        
-        /* Short Stories Tab Styles */
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .story-card {
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 3px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 10px 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            background-color: transparent;
+            border: 1px solid #ddd;
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .story-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-            border-color: #aaaaaa;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            font-size: 15px;
         }
         
-        .story-card-link {
+        nav a:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+            border-color: #ccc;
+        }
+        
+        nav a.active {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+        }
+        
+        /* Content styles */
+        main {
+            flex: 1;
+            padding: 25px 0;
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #000;
+            position: relative;
+            padding-bottom: 12px;
+            font-size: 28px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .section-title:after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
-            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: #000;
         }
         
-        .story-card-content {
-            position: relative;
-            z-index: 2;
-            pointer-events: none;
-            height: 100%;
+        /* Horizontal content layout */
+        .horizontal-layout {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            flex-wrap: wrap;
         }
         
-        .story-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #dddddd;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
+        .content-card {
+            background: #fff;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            overflow: hidden;
         }
-
-        .story-card:hover .story-image {
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img {
+            height: 160px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            filter: grayscale(100%);
+        }
+        
+        .content-card:hover .card-img img {
+            transform: scale(1.05);
             filter: grayscale(0%);
         }
         
-        .story-title {
-            padding: 1.2rem 1.2rem 0.8rem;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1rem;
-            color: #000000;
-        }
-
-        .story-preview {
-            padding: 0 1.2rem;
-            font-size: 0.92rem;
-            color: #555555;
-            text-align: center;
-            flex-grow: 1;
-            margin-bottom: 1.2rem;
-            line-height: 1.5;
-        }
-
-        .read-more {
-            display: block;
-            text-align: center;
-            padding: 0.85rem;
-            background-color: #000000;
-            color: #ffffff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-top: auto;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            border-top: 1px solid #dddddd;
-            pointer-events: auto;
-            position: relative;
-            z-index: 3;
-        }
-
-        .read-more:hover {
-            background-color: #222222;
+        .card-content {
+            padding: 20px;
         }
         
-        /* About Tab Styles */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .card-content h3 {
+            color: #000;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
             text-align: center;
+        }
+        
+        .card-content p {
+            color: #555;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 0.8em;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 8px;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+        
+        .read-more:hover {
+            color: #444;
+            border-bottom-color: #444;
+        }
+        
+        /* About page specific styles */
+        .about-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .about-content p {
-            margin-bottom: 1.8rem;
-            font-size: 1.1rem;
-            color: #333333;
-            line-height: 1.7;
-        }
-
-        .about-content h2 {
-            margin-bottom: 2rem;
-            color: #000000;
-            font-size: 1.8rem;
-        }
-
-        .substack-link {
-            display: inline-block;
-            margin: 1.5rem 0;
-            padding: 1rem 2rem;
-            background-color: #000000;
-            color: white;
-            text-decoration: none;
-            border-radius: 3px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 1px solid #000000;
-        }
-
-        .substack-link:hover {
-            background-color: #ffffff;
-            color: #000000;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 17px;
         }
         
-        .contact-form {
-            max-width: 500px;
-            margin: 3rem auto;
-            padding: 2.5rem;
-            background-color: #ffffff;
-            border-radius: 3px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid #dddddd;
-        }
-
-        .contact-form h3 {
-            margin-bottom: 1.5rem;
-            color: #000000;
+        .substack-cta {
             text-align: center;
-            font-size: 1.4rem;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin: 30px 0;
+            border-left: 4px solid #ff6719;
+        }
+        
+        .substack-button {
+            display: inline-block;
+            background: #ff6719;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .substack-button:hover {
+            background: #e05a14;
+        }
+        
+        /* Contact Form Styles */
+        .contact-form {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            margin-top: 30px;
         }
         
         .form-group {
-            margin-bottom: 1.8rem;
+            margin-bottom: 20px;
         }
         
-        label {
+        .form-group label {
             display: block;
-            margin-bottom: 0.6rem;
-            font-weight: bold;
-            color: #333333;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
         }
         
-        input, textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
-            padding: 0.9rem;
-            border: 1px solid #dddddd;
-            border-radius: 3px;
-            font-size: 1rem;
-            background-color: #f9f9f9;
-            transition: border 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #999999;
-            background-color: #ffffff;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: 'EB Garamond', serif;
         }
         
-        textarea {
-            height: 150px;
+        .form-group textarea {
+            min-height: 150px;
             resize: vertical;
         }
         
-        button[type="submit"] {
-            background-color: #000000;
-            color: #ffffff;
+        .submit-btn {
+            background: #000;
+            color: white;
             border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            border: 1px solid #000000;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s ease;
         }
         
-        button[type="submit"]:hover {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-            border-top: 1px solid #dddddd;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+        .submit-btn:hover {
+            background: #333;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .tab-content {
-                padding: 1.5rem;
+        /* Form status message */
+        .form-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+            text-align: center;
+        }
+        
+        .form-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        
+        .form-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: auto;
+        }
+        
+        .copyright {
+            color: #aaa;
+            font-size: 0.85em;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .horizontal-layout {
+                gap: 20px;
             }
             
-            .stories-grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                gap: 1.5rem;
-            }
-
-            .contact-form {
-                padding: 1.5rem;
+            .content-card {
+                min-width: calc(50% - 20px);
             }
         }
-		
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                max-width: 300px;
+            }
+            
+            .slogan {
+                font-size: 14px;
+                padding: 0 15px;
+                min-height: 35px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                text-align: center;
+                padding: 12px;
+                font-size: 14px;
+            }
+            
+            .horizontal-layout {
+                flex-direction: column;
+            }
+            
+            .content-card {
+                min-width: 100%;
+            }
+            
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+            
+            .about-content {
+                padding: 25px;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     try {
         posthog.init('phc_XYDA7DUool5u8LHJOOmLGMBlrD6lQLZmPKZioRxmvO2', {
             api_host: 'https://us.i.posthog.com',
@@ -375,151 +496,170 @@
     }
 </script>
 <body>
-<link rel="icon" type="image/png" href="Eclectic_logo_favicon.png">
     <header>
-        <div class="logo-container">
-            <img src="Eclectic_wordmark.png" 
-                 alt="Eclectic Logo" 
-                 style="height: 72px; width: 417px; max-width: 100%;">
-        </div>
-        <div class="tagline">
-            <span class="tagline-text" id="animatedTagline"></span>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="Eclectic_wordmark.png" alt="Eclectic">
+                </div>
+                
+                <div class="slogan">
+                    <div class="slogan-text" id="animatedTagline"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#short-stories" class="nav-link active" data-section="short-stories">Short Stories</a></li>
+                        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     
-    <div class="tabs">
-        <button class="tab-btn active" data-tab="stories">SHORT STORIES</button>
-        <button class="tab-btn" data-tab="about">ABOUT</button>
-    </div>
-    
-    <div id="stories" class="tab-content active">
-        <h2 style="text-align: center; margin-bottom: 1.5rem; color: #000000;">SHORT STORIES</h2>
-        <p style="text-align: center; color: #555555; max-width: 700px; margin: 0 auto 2rem;">Click on a story card to read it.</p>
-        
-        <div class="stories-grid">
-            <div class="story-card">
-                <a href="volta.html" class="story-card-link"></a>
-                <div class="story-card-content">
-                    <img src="https://substackcdn.com/image/fetch/$s_!i612!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe40bc51a-1979-4371-8970-9eb0863b6692_1280x970.jpeg" alt="Volta" class="story-image">
-                    <div class="story-title">VOLTA</div>
-                    <div class="story-preview">
+    <main class="container">
+        <!-- Short Stories Section -->
+        <section id="short-stories" class="content-section active">
+            <h2 class="section-title">Short Stories</h2>
+            <div class="horizontal-layout">
+                <!-- Story Card 1: VOLTA -->
+                <div class="content-card">
+                    <div class="card-img">
+                        <img src="https://substackcdn.com/image/fetch/$s_!i612!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe40bc51a-1979-4371-8970-9eb0863b6692_1280x970.jpeg" alt="Volta">
+                    </div>
+                    <div class="card-content">
+                        <h3>VOLTA</h3>
                         <p>Unexpectedly and with a tremendous peal, the bomb had detonated along a teeming promenade café. The dense column of smoke sprawled high into the evening sky—some great blossoming on this cruel April day...</p>
+                        <a href="volta.html" class="read-more">Read Story</a>
+                        <div class="meta">
+                            <span><i class="far fa-clock"></i> 23 min read</span>
+                            <span><i class="far fa-calendar"></i> July 15, 2024</span>
+                        </div>
                     </div>
-                    <a href="volta.html" class="read-more">READ MORE</a>
                 </div>
-            </div>
-            
-            <div class="story-card">
-                <a href="mud.html" class="story-card-link"></a>
-                <div class="story-card-content">
-                    <img src="https://substackcdn.com/image/fetch/$s_!okOL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad46cc41-bee9-44d5-939d-8aeee126e5c0_1200x782.jpeg" alt="Mud" class="story-image">
-                    <div class="story-title">MUD</div>
-                    <div class="story-preview">
+                
+                <!-- Story Card 2: MUD -->
+                <div class="content-card">
+                    <div class="card-img">
+                        <img src="https://substackcdn.com/image/fetch/$s_!okOL!,f_auto,q_auto:good,fl_progressive:极eep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad46cc41-bee9-44d5-939d-8aeee126e5c0_1200x782.jpeg" alt="Mud">
+                    </div>
+                    <div class="card-content">
+                        <h3>MUD</h3>
                         <p>A darkened gradient stretched across the sky on this innumerable day. The whistle reverberated throughout the network of trenches; its tinny resolve linked other whistles in an invisible, yet audible web...</p>
+                        <a href="mud.html" class="read-more">Read Story</a>
+                        <div class="meta">
+                            <span><i class="far fa-clock"></i> 1 min read</span>
+                            <span><i class="far fa-calendar"></i> July 28, 2024</span>
+                        </div>
                     </div>
-                    <a href="mud.html" class="read-more">READ MORE</a>
                 </div>
-            </div>
-            
-            <div class="story-card">
-                <a href="silver_and_coal.html" class="story-card-link"></a>
-                <div class="story-card-content">
-                    <img src="https://substackcdn.com/image/fetch/$s_!G9r_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2383fb-dc94-4c4d-b0ec-0dcd007df667_4980x2800.jpeg" alt="Silver and Coal" class="story-image">
-                    <div class="story-title">SILVER AND COAL</div>
-                    <div class="story-preview">
+                
+                <!-- Story Card 3: SILVER AND COAL -->
+                <div class="content-card">
+                    <div class="card-img">
+                        <img src="https://substackcdn.com/image/fetch/$s_!G9r_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2383fb-dc94-4c4d-b0ec-0dcd007df667_4980x2800.jpeg" alt="Silver and Coal">
+                    </div>
+                    <div class="card-content">
+                        <h3>SILVER AND COAL</h3>
                         <p>At Noon on the 23rd of April in the Year 1778, the American Sloop-of-War, the Ranger, sailed into the Soloway Firth, riding uneasily at Anchor off St. Mary's Isle—a peninsula and the Ancient seat of the Douglas family, its sole inhabitants...</p>
+                        <a href="silver_and_coal.html" class="read-more">Read Story</a>
+                        <div class="meta">
+                            <span><i class="far fa-clock"></i> 14 min read</span>
+                            <span><i class="far fa-calendar"></i> Apr 23, 2025</span>
+                        </div>
                     </div>
-                    <a href="silver_and_coal.html" class="read-more">READ MORE</a>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div id="about" class="tab-content">
-        <div class="about-content">
-            <h2>ABOUT ECLECTIC</h2>
-            <p>Eclectic is a small, one-man operation; a publication of anything and everything. Eclectic yearns to be the home of the passionate, publishing material that is well-written, well-researched, and overall neglected or too archaic, labyrinthine, obsessive, and even grotesque or avant-garde. We find interest in the gritty, the unknown, the unknowable.</p>
-
-            <p>If you have a penchant to tell a story with obsessive and meticulous detail, Eclectic may just be the home for your work.</p>
-            
-            <p>For more stories and regular updates, subscribe to our Substack newsletter:</p>
-            
-            <a href="https://eclecticmag.substack.com" class="substack-link" target="_blank">VISIT ECLECTIC ON SUBSTACK</a>
-            
-            <div class="contact-form">
-                <form action="https://formspree.io/f/xpwlongb" method="POST"> 
-                    <h3>CONTACT US</h3>
-                    <div class="form-group">
-                        <label for="name">NAME:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">EMAIL:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">MESSAGE:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    
-                    <button type="submit">SEND MESSAGE</button>
-                </form>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p>Eclectic is a small, one-man operation; a publication of anything and everything. Eclectic yearns to be the home of the passionate, publishing material that is well-written, well-researched, and overall neglected or too archaic, labyrinthine, obsessive, and even grotesque or avant-garde. We find interest in the gritty, the unknown, the unknowable.</p>
+                
+                <p>If you have a penchant to tell a story with obsessive and meticulous detail, Eclectic may just be the home for your work.</p>
+                
+                <div class="substack-cta">
+                    <p>For more stories and regular updates, subscribe to our Substack newsletter:</p>
+                    <a href="https://eclecticmag.substack.com/" class="substack-button" target="_blank">
+                        Subscribe on Substack
+                    </a>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <!-- Formspree form with proper implementation -->
+                    <form id="contactForm" action="https://formspree.io/f/xpwlongb" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="formStatus" class="form-status"></div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     
     <footer>
-        <p>&copy; 2025 ECLECTIC. ALL RIGHTS RESERVED.</p>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 Eclectic. All rights reserved.
+            </div>
+        </div>
     </footer>
-    
+
     <script>
         // Tab functionality
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-                
-                // Update active tab button
-                tabBtns.forEach(btn => btn.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // Update active tab content
-                tabContents.forEach(content => content.classList.remove('active'));
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-        
-        // Contact form functionality
-        const contactForm = document.querySelector('.contact-form form');
-		if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            const name = document.getElementById('name').value;
-            alert(`Thank you, ${name}! Your message has been sent.`);
-            contactForm.reset();
-        } else {
-            alert('There was an error. Please try again later.');
-        }
-    });
-}
-
-        // Tagline Animation Script - Fixed
         document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Function to activate a section
+            function activateSection(sectionId) {
+                // Remove active class from all links and sections
+                navLinks.forEach(item => item.classList.remove('active'));
+                contentSections.forEach(section => section.classList.remove('active'));
+                
+                // Add active class to clicked link and corresponding section
+                const activeLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+                const activeSection = document.getElementById(sectionId);
+                
+                if (activeLink) activeLink.classList.add('active');
+                if (activeSection) activeSection.classList.add('active');
+            }
+            
+            // Check for hash in URL on page load
+            if (window.location.hash) {
+                const sectionFromHash = window.location.hash.substring(1); // Remove the # symbol
+                activateSection(sectionFromHash);
+            } else {
+                // Default to short-stories if no hash
+                activateSection('short-stories');
+            }
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const sectionId = this.getAttribute('data-section');
+                    // Update URL hash without scrolling
+                    history.pushState(null, null, `#${sectionId}`);
+                    activateSection(sectionId);
+                });
+            });
+            
+            // Tagline Animation Script
             const tagline = "One Thing Leads To Another. Everything Is Connected.";
             const container = document.getElementById('animatedTagline');
             
@@ -536,8 +676,60 @@
                     container.appendChild(span);
                 });
             }
+            
+            // Contact form submission with proper Formspree handling
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Disable submit button to prevent multiple submissions
+                    const submitBtn = contactForm.querySelector('.submit-btn');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    // Collect form data
+                    const formData = new FormData(contactForm);
+                    
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            // Show success message
+                            formStatus.textContent = 'Thank you for your message! We will get back to you soon.';
+                            formStatus.className = 'form-status success';
+                            
+                            // Reset form
+                            contactForm.reset();
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    } catch (error) {
+                        // Show error message
+                        formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
+                        formStatus.className = 'form-status error';
+                    } finally {
+                        // Re-enable submit button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                        
+                        // Hide status message after 5 seconds
+                        setTimeout(() => {
+                            formStatus.className = 'form-status';
+                            formStatus.textContent = '';
+                        }, 5000);
+                    }
+                });
+            }
         });
-		
     </script>
 </body>
 </html>

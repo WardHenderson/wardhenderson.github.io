@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    try {
-        posthog.init('phc_XYDA7DUool5u8LHJOOmLGMBlrD6lQLZmPKZioRxmvO2', {
-            api_host: 'https://us.i.posthog.com',
-            loaded: function(posthog) {
-                console.log('PostHog loaded successfully');
-                // You can add any PostHog tracking calls here that need to wait for initialization
-            },
-            capture_pageview: true,
-            autocapture: {
-                dom_event_allowlist: ['click', 'submit'],
-                css_selector_allowlist: ['.tab-btn', '.read-more', '.substack-link']
-            },
-            persistence: 'localStorage+cookie'
-        });
-    } catch (e) {
-        console.error('PostHog initialization failed', e);
-    }
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SILVER AND COAL | Eclectic</title>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Eclectic_logo_favicon.png">
+    <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        try {
+            posthog.init('phc_XYDA7DUool5u8LHJOOmLGMBlrD6lQLZmPKZioRxmvO2', {
+                api_host: 'https://us.i.posthog.com',
+                loaded: function(posthog) {
+                    console.log('PostHog loaded successfully');
+                },
+                capture_pageview: true,
+                autocapture: {
+                    dom_event_allowlist: ['click', 'submit'],
+                    css_selector_allowlist: ['.tab-btn', '.read-more', '.substack-link']
+                },
+                persistence: 'localStorage+cookie'
+            });
+        } catch (e) {
+            console.error('PostHog initialization failed', e);
+        }
+    </script>
     <style>
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'EB Garamond', serif;
         }
         
         body {
-            background-color: #f8f8f8;
+            font-family: "Times New Roman", Times, serif;
             color: #333;
             line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header styles - White background */
-        header {
             background-color: #fff;
-            color: #333;
-            padding: 25px 0 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            border-bottom: 1px solid #eee;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
         
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: normal;
+            letter-spacing: 0.5px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
         }
         
         .logo-container {
-            margin-bottom: 15px;
-            background-color: transparent;
-            padding: 0;
-            border: none;
-            max-width: 412px;
-            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 8px;
         }
         
         .logo-container img {
             width: 100%;
             height: auto;
-            display: block;
         }
         
-        /* Slogan styles - Smaller and more refined */
+        /* Updated Slogan with Animation - matching test.html spacing */
         .slogan {
-            text-align: center;
+            font-style: italic;
             margin-bottom: 20px;
-            color: #333;
-            font-size: 16px;
-            letter-spacing: 0.4px;
-            max-width: 600px;
-            line-height: 1.3;
-            font-weight: 600;
+            font-size: 1.2rem;
             position: relative;
-            padding: 8px 0;
             overflow: hidden;
-            min-height: 40px;
+            min-height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -103,527 +107,542 @@
             display: inline-block;
         }
         
-        /* Tagline Animation Styles */
-        .tagline-char {
+        /* Improved Snake Motion Animation - Smoother */
+        .snake-char {
             display: inline-block;
             position: relative;
-            transform-origin: bottom center;
-            animation: snakeWave 3s infinite ease-in-out;
+            transform-origin: center;
         }
         
-        .tagline-char.space {
+        .snake-char.animating {
+            animation: snakeWave 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        .snake-char.space {
             width: 0.3em;
         }
-
+        
         @keyframes snakeWave {
-            0%, 100% {
+            0% {
                 transform: translateY(0) rotate(0deg);
             }
-            25% {
-                transform: translateY(-3px) rotate(2deg);
+            20% {
+                transform: translateY(-4px) rotate(3deg);
             }
-            50% {
+            40% {
+                transform: translateY(2px) rotate(-2deg);
+            }
+            60% {
+                transform: translateY(-2px) rotate(1deg);
+            }
+            80% {
+                transform: translateY(1px) rotate(-1deg);
+            }
+            100% {
                 transform: translateY(0) rotate(0deg);
-            }
-            75% {
-                transform: translateY(3px) rotate(-2deg);
             }
         }
         
-        /* Navigation styles */
+        /* Navigation */
         nav ul {
             display: flex;
-            list-style: none;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
-        }
-        
-        nav li {
-            margin: 0;
+            list-style: none;
+            gap: 30px;
         }
         
         nav a {
-            display: block;
-            padding: 10px 25px;
             text-decoration: none;
             color: #333;
-            font-weight: 600;
-            background-color: transparent;
-            border: 1px solid #ddd;
-            transition: all 0.3s ease;
-            border-radius: 3px;
-            letter-spacing: 0.5px;
-            font-size: 15px;
+            font-size: 1.1rem;
+            padding: 5px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
         }
-
-        nav a:hover {
-            background-color: #333;
-            color: #fff;
-            transform: translateY(-2px);
-            border-color: #333;
-        }
-
+        
+        nav a:hover,
         nav a.active {
-            background-color: #000;
-            color: #fff;
-            border-color: #000;
+            border-bottom: 1px solid #333;
         }
         
-        /* Story Content Styles */
-        .story-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #eee;
-        }
-        
+        /* Story header */
         .story-header {
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ddd;
         }
         
         .story-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #000;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
             line-height: 1.2;
         }
         
+        .story-subtitle {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Updated Story Meta with Centered Bullets */
         .story-meta {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            color: #777;
-            font-size: 0.9rem;
+            align-items: center;
+            color: #666;
+            font-size: 0.95rem;
             margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
+        .meta-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .meta-item:not(:last-child)::after {
+            content: "•";
+            margin-left: 10px;
+            color: #999;
+        }
+        
+        /* Story image */
         .story-image {
             width: 100%;
-            height: 400px;
+            max-height: 500px;
             object-fit: cover;
             margin: 30px 0;
-            border-radius: 3px;
+            filter: grayscale(30%);
         }
         
         .image-caption {
             text-align: center;
             font-style: italic;
             color: #777;
-            margin-top: 10px;
+            margin-top: -20px;
+            margin-bottom: 30px;
             font-size: 0.9rem;
         }
         
+        /* Story content */
         .story-content {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #333;
+            max-width: 700px;
+            margin: 0 auto 40px;
         }
         
-        .story-content p {
-            margin-bottom: 25px;
-            text-align: justify;
-        }
-        
-        /* Drop cap styling - applied to first paragraph */
-        .story-content p:first-of-type:first-letter {
+        .story-content p:first-child:first-letter {
             float: left;
             font-size: 4.5rem;
-            line-height: 0.8;
-            padding-right: 8px;
-            padding-top: 8px;
-            font-weight: 700;
-            color: #000;
+            line-height: 3.5rem;
+            padding-top: 0.5rem;
+            padding-right: 0.5rem;
+            padding-left: 0.1rem;
+            font-weight: bold;
         }
         
-        /* Quote styling */
+        /* Quote styling for story template */
         .quote {
             font-style: italic;
             text-align: center;
             margin: 30px 0;
             padding: 20px;
-            border-left: 3px solid #eee;
-            border-right: 3px solid #eee;
+            color: #666;
             font-size: 1.2rem;
+            line-height: 1.6;
         }
         
-        .back-link {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #000;
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 1px solid #000;
-            padding-bottom: 2px;
-        }
-        
-        /* Footer styles - Black */
-        footer {
-            background-color: #000;
-            color: #fff;
+        .story-footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
             text-align: center;
-            padding: 18px 0;
-            margin-top: auto;
+            color: #666;
+            font-style: italic;
         }
         
-        .copyright {
-            color: #aaa;
-            font-size: 0.85em;
+        /* Navigation between stories */
+        .story-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
         }
         
-        /* Responsive styles */
+        .nav-button {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background-color: #f5f5f5;
+            border-color: #333;
+        }
+        
+        /* Finger point image styling */
+        .finger-point {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        
+        /* Center the back button */
+        .center-nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            .logo-container {
-                max-width: 300px;
-            }
-            
-            .slogan {
-                font-size: 14px;
-                padding: 0 15px;
-                min-height: 35px;
+            body {
+                padding: 15px;
             }
             
             nav ul {
                 flex-direction: column;
-                width: 100%;
-                align-items: center;
-                gap: 8px;
-            }
-            
-            nav li {
-                width: 100%;
-            }
-            
-            nav a {
-                text-align: center;
-                padding: 12px;
-                font-size: 14px;
-            }
-            
-            .story-container {
-                padding: 20px;
-                margin: 20px auto;
+                gap: 10px;
             }
             
             .story-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .story-meta {
                 flex-direction: column;
-                gap: 8px;
+                gap: 5px;
             }
             
-            .story-image {
-                height: 250px;
+            .meta-item:not(:last-child)::after {
+                content: none;
             }
             
-            .story-content {
-                font-size: 1.1rem;
+            .story-navigation {
+                flex-direction: column;
+                gap: 15px;
             }
             
-            .quote {
-                font-size: 1.1rem;
-                padding: 15px;
+            .center-nav {
+                order: 1;
             }
-            
-            .story-content p:first-of-type:first-letter {
-                font-size: 3.5rem;
+
+            .slogan {
+                min-height: 45px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-container">
-                    <img src="Eclectic_wordmark.png" alt="Eclectic">
-                </div>
-                
-                <div class="slogan">
-                    <div class="slogan-text" id="animatedTagline"></div>
-                </div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="index.html#short-stories" class="nav-link">Short Stories</a></li>
-                        <li><a href="index.html#about" class="nav-link">About</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="logo-container">
+            <a href="index.html"><img src="Eclectic_wordmark.png" alt="Eclectic"></a>
         </div>
+        
+        <div class="slogan">
+            <div class="slogan-text" id="animatedSlogan"></div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html#short-stories">Short Stories</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <main class="container">
-        <article class="story-container">
+    <main>
+        <article class="story-content">
             <header class="story-header">
                 <h1 class="story-title">SILVER AND COAL</h1>
                 <div class="story-meta">
-                    <span><i class="far fa-user"></i> Ward Henderson</span>
-                    <span><i class="far fa-clock"></i> 14 min read</span>
-                    <span><i class="far fa-calendar"></i> Apr 23, 2025</span>
+                    <div class="meta-item">Ward Henderson</div>
+                    <div class="meta-item">14 min read</div>
+                    <div class="meta-item">Apr 23, 2025</div>
                 </div>
             </header>
             
             <img src="https://substackcdn.com/image/fetch/$s_!G9r_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2383fb-dc94-4c4d-b0ec-0dcd007df667_4980x2800.jpeg" 
                  alt="First Recognition of the American Flag by a Foreign Government by Edward Moran, 1898" 
                  class="story-image">
-            <p class="image-caption"><i>First Recognition of the American Flag by a Foreign Government by Edward Moran, 1898</i></p>
+            <p class="image-caption">First Recognition of the American Flag by a Foreign Government by Edward Moran, 1898</p>
             
-            <div class="story-content">
-                <div class="quote">
-                    <i>"Now and then we had a hope that if we lived and were good, God would permit us to be pirates."</i><br>—MARK TWAIN
-                </div>
-                
-                <p>At Noon on the 23rd of April in the Year 1778, the American Sloop-of-War, the Ranger, sailed into the Soloway Firth, riding uneasily at Anchor off St. Mary's Isle—a peninsula and the Ancient seat of the Douglas family, its sole inhabitants. The Isle was gloomily Shrouded in the dim Fog, as though it were the only Tract of Land within the peripheral Sight of a Sailor. As the Tide began to Ebb, flowing outward past Kirkcudbright Bay, toward the Irish Sea, a Boy—the young Thomas Douglas, Heir to the Earl of Selkirk—curiously stood in the Gardens of the Douglas Castle, peering through a Spyglass at the unheralded Vessel. Observing a Flag of Thirteen Red and White Stripes, with a Canton of Blue, and White Stars fluttering upon its Halyard, showing bravely like a Constellation—did the young Douglas then engage in the lighthearted and playful Equivocation of counting each Star, forestalling his Day's Chores. When reaching the Ninth Star, Thomas was seized by the Governess of his Family's Estate and she swiftly whisked him away.</p>
-                
-                <p>Captain John Paul Jones, in Command of the Ranger, collapsed his Spyglass and paced the Starboard Side of the Quarterdeck. To the Larboard Side, First Lieutenant Simpson and Lieutenant Wallingford watched the Captain's restless Traipse, much like a Billiard-Ball in a Game of Cue.</p>
-                
-                <p>"Pray, I reckon the Cap'n is yet undecided," remarked Lieutenant Simpson, his Words laced with an Air of Vexation.</p>
-                
-                <p>"It would seem," replied Lieutenant Wallingford, "that the Captain is bound by Newton's Third Law of Motion."</p>
-                
-                <p>A Pause. "Eh?" Simpson, brow furrowed.</p>
-                
-                <p>"Why, 'tis purely Newtonian, the Captain's Demeanor! Viz.—For every Action, there is an equal and opposite Reaction. The Douglases have proven as much." Nodding his Pate sagely. His breath effusive with Alcohol.</p>
-                
-                <p>"Speak plainly, Man," Simpson, firm in rejoinder.</p>
-                
-                <p>"Oh." Wallingford, hurried. "I mean only to say that the Captain's Hesitation springs from a Matter most Personal—"</p>
-                
-                <p>"There." Simpson interjected. "That suffices. If only you were Equally as Intelligent when Sober." He rocked upon his Heels and cast his Gaze upon the Yard of the Spanker Sail as it sway'd gently in the Breeze.</p>
-                
-                <p>"You know," began Lieutenant Wallingford, "'tis whispered that the Captain himself is a Bastard offspring of the Selkirks."</p>
-                
-                <p>"Arghl—Selkirks be damn'd! Curse your drunkenness! We have our Orders, by G—d!" And with that, Lieutenant Simpson storm'd off across the Quarterdeck toward the Captain, Lieutenant Wallingford following at length to his Heel.</p>
-                
-                <p>The Manner in which they approached the Captain near provoked him to lay Hand upon his Sword. Still aggrieved by the Failure at Whitehaven—a Venture most Ill-shared—the Crew having grown reluctant to "destroy the Property of poor People," as Lieutenant Wallingford had confessed after the Attack. Their Privateering exploits in the British Isles had thus far proved poorly, yielding but two Prizes of little worth: a pair of Fruit-Laden Vessels of ill-repute and the Lord Chatham, whose Hold contained only a Hundred Hogsheads of English Porter—enough, the Captain fancied, to quiet a Crew already simmering with Discontent, yet sufficient also, in his Folly, to sustain the Drunken Rage of those Undisciplined Matelots who now despised him the more for it.</p>
-                
-                <p>"Your Orders, Sir?" Lieutenant Simpson inquired with ease.</p>
-                
-                <p>The Captain drew himself upright, his Breast heaving with a weary Sigh. "I have resolved to go Ashore. Lieutenant Wallingford and Master Cullam shall attend me. Lieutenant Simpson, you will remain Aboard with Lieutenant Meijer and Lieutenant Hall. We take Thirty of our Men ashore."</p>
-                
-                <p>"Aye, Sir," replied Simpson, who no sooner withdrew to the Main Deck to help muster the Raiding Party—In Truth, Lieutenant Simpson seethed with silent Indignation. As First Lieutenant of the Ranger, he sustained a bitter Conviction that the Captain had slighted him—a Belief that had festered since their Landfall in France, when he had expected to assume Command of the Ship. Their Relationship had become a Fraught, with frequent Disputes over Matters of Leadership and private Quarrels that strained both of the Men's patience.</p>
-                
-                <p>Before long, two Longboats were lowered from the Ranger, and Thirty of her Motley Crew rowed toward the Docks of Douglas Castle.</p>
-                
-                <p>"G—d strike me dead," muttered Lieutenant Simpson, "for I wish that they capsized," his Voice dry as he watched the Boats pull for Land.</p>
-                
-                <p>As the Longboats hauled for Shore, the Raiding Party, led by Lieutenant Walligford and Master Cullam, were first to set upon the Docks. Like Dogs, the Disreputable Gaggle of Men, some bearded, tattooed, and one-eyed, armed with Cutlasses, Dirks, and Flintlocks, picked their way to the Castle, with Lieutenant Wallingford, and Master Cullam at their Head.</p>
-                
-                <p>"Put your backs into it, men!" Shouted Captain Jones as his Longboat lazily pulled to shore.</p>
-                
-                <p>Wallingford, Cullam and their Party picked their way up to Douglas Castle, ransacking the Gardens lined with Boxwood, until they stood before the Great Door—Majestickal, yet strangely Unassuming.</p>
-                
-                <p>Master Cullam beat upon the Door with the Pommel of his Cutlass, near splitting the Oak with his blows.</p>
-                
-                <p>"Open this Door, damn your Eyes!" bellowed Master Cullam. "David!" he roared, turning to the party, "Where is David?"</p>
-                
-                <p>David Freeman, who at Whitehaven had spoiled the Attack by slipping from the Crew to knock upon every Door in Marlborough Street, warning the townsfolk of the coming Conflagration. He was thrust forward through the Ranks of Men, and answering the Master's summons, said: "Aye, Sir?"</p>
-                
-                <p>"You've shown Talent for Door-Knocking, have you not? Well then—to it! And D—I take ye if ye don't!"</p>
-                
-                <p>David Freeman obeyed, hastily rapping his Knuckles against the Great Door, much to the amusement of the crew.</p>
-                
-                <p>Within, Countess Selkirk, fraught with Child and but lately risen from her Breakfast, spoke calmly: "Daniel, pray, see who is outside."</p>
-                
-                <p>"'Tis Pirates, Madam! Pirates, I say!" shrieked the Governess. "Was Providence alone that spared Young Thomas when I found him spying on their ship!"</p>
-                
-                <p>"Now, now, Clarissa," said Countess Selkirk, her Voice measured though the Knocking which echoed through the Hall. "Calm yourself. Daniel, if you would, please?"</p>
-                
-                <p>"At once, My Lady," replied Daniel, making his Bow before approaching the Door.</p>
-                
-                <p>"State your Business?" he called through the Door.</p>
-                
-                <p>Master Cullam, thrusting David Freeman aside, shouted: "Open this Door! We've come for the Earl! Hand him over—and swiftly! May G—d have Mercy on ye!"</p>
-                
-                <p>Daniel, maintaining his Customary Composure and Gentleman's Demeanor, replied: "The Earl is not home, sir. If you Gentlemen be a Press-Gang from the Royal Navy, I fear you'll find no Seamen here to press."</p>
-                
-                <p>"The Earl is not at Home?" David Freeman repeated with careless Disregard.</p>
-                
-                <p>"He is not, Sir," Daniel maintained with Composure. At this, David broke from the Crew, shoved past Master Cullam, and scurried back toward the Docks to bear Tidings to the Captain.</p>
-                
-                <p>The Captain's Longboat had but made Landfall, its Raiders mounting the Docks. Upon hearing of the Earl's Absence, Captain Jones resolved to retreat to the Longboat, where he feigned to submit to the news, knowing full well the mutinous air that Lingered among the Crew.</p>
-                
-                <p>"Inform Lieutenant Wallingford and Master Cullam that no Men are to enter the House. We must not depart without some Token of our Visit. If they should procure an Object of Worth, that shall suffice."</p>
-                
-                <p>"Aye, Sir," David acknowledged, then hurried back to the Raiding Party with all Haste and informed the Officers, who were still barr'd at the entrance.</p>
-                
-                <p>"Argh!" roared Master Cullam, beating the door once more, "I know well what needs Pressing, you Impudent little—"</p>
-                
-                <p>"Enough, Master Cullam," interposed Lieutenant Wallingford. "Sir," he continued mildly, "we are no Men of the Royal Navy, but Free Sailors of the Continental Navy—Americans all."</p>
-                
-                <p>"Americans?" David repeated, the unfamiliar Demonym first confounding him, breaking through his usual Reserve.</p>
-                
-                <p>Then, no sooner had Countess Selkirk emerged from the Breakfast Room to investigate the Confusion herself.</p>
-                
-                <p>"What ever is this Disturbance about, Daniel?" inquired Countess Selkirk.</p>
-                
-                <p>"'Tis the Americans, My Lady."</p>
-                
-                <p>Having briefly parted the Drapes to observe the Cutlass and Pistol-wielding Crew did her Mouth fell agape, momentarily, before she swiftly regained her Composure. Upon opening the Door, she beheld Lieutenant Wallingford and Master Cullam in the threshold, in their Full Dress Uniforms, flanked by Thirty rough Seamen who stood in uneasy Repose, their Eyes naturally drawn to her Bosom.</p>
-                
-                <p>"Good Day, Madam," said Lieutenant Wallingford, removing his Tricorn. "My name is Lt. Samuel Wallingford, and this is my subordinate, Mstr. David Cullam. Might I and my Subordinate, Master Cullam. May we enter?"</p>
-                
-                <p>"Y-Yes, please" she answered abruptly, scarcely considering her Decision, and gestured them entry. They removed to the Drawing Room where their Discourse continued.</p>
-                
-                <p>"Now then," she exhaled sharply, "I insist upon an Explanation for this Outrageous Invasion of our Privacy. What do you Men want?"</p>
-                
-                <p>"My Lady," began Lieutenant Wallingford, smoothly, "I most Sincerely apologize for the Disturbance. I have Orders from my Captain, Mr. John Paul Jones, advised himself by Mister Benjamin Franklin, Envoy at the Court of Versailles in Paris, to take your Husband, the Earl, into our Custody. You are doubtless aware of the Hostilities between America and Great Britain. We mean to employ the Earl as Leverage in London, you see, to secure the Release of American Prisoners captured at Sea."</p>
-                
-                <p>"My Husband is not at Home," she stated curtly, implying that even were he Present, he would never surrender himself to such a mangy Band of Uncouth Sailors.</p>
-                
-                <p>Lieutenant Wallingford paused for a moment, then with a Smile replied: "It matters not, My Lady," he cast his Gaze upward to the Ceiling, detecting a faint Cascade of Footfalls from the Upper Chambers—in Truth, it was the Maidservants restraining Young Thomas, the Boy's Ear pressed flush against the Floorboards as he listened to every Word of the Conversation below. "His Son is at Home, of that I've no Doubt. We shall have him Instead."</p>
-                
-                <p>At this Proposition, Countess Selkirk drew herself up to her full Height, her Bosom swelling, Arms akimbo, and pouting, declared: "You will have to kill me before you take my Son!"</p>
-                
-                <p>Lieutenant Wallingford entreated her for Composure, vowing no Harm should befall any within the Household. Thus pacified, she ushered the Men into the Breakfast Parlor, proffering the Family's Silver-Tea Plate as Renumeration in lieu of the Earl's absence. She summoned her Maids from their Upstairs refuge, who served Whiskey to the Sailors milling about in the Gardens.</p>
-                
-                <p>As the Hour progressed, what began as strained Hospitality devolved into something resembling Gin Lane. The Crewmen, now emboldened under the spell of Alcholick Reverie, wandered the Halls at will—much to the consternation of Daniel, the Butler, whose frantic Vigilance alone preserved the Family's Georgian Treasures from disappearing into their Thieving Hands. The Maids, whose pleasure the Sailors would doubtless have preferred, proved more effective than poor Daniel in keeping the Men at bay.</p>
-                
-                <p>Over wine, Lieutenant Wallingford and Master Cullam ingratiated Countess Selkirk's forbearance through a succession of Toasts, which seemed endless.</p>
-                
-                <p>"My Lady," said Lieutenant Wallingford, "A Toast to your Health and to your Unborn Child." Raising his Glass, he threw back his Nob and took a hearty Swig, then regarded his Hostess with widened Eyes. "I declare, 'tis exceptional! Do you not agree?'" Here he elbowed Master Cullam. "Surely among the finest you've tasted?"</p>
-                
-                <p>Master Cullam chuckled and nodded. "'Tis fine, Madam. Though I'll warrant these Climes don't favor Vineyards?'"</p>
-                
-                <p>"Indeed not," she replied, replenishing their Glasses, "the Grapes were harvested in the Vendée, in the Loire Valley."</p>
-                
-                <p>"A French Wine!" exclaimed Lieutenant Wallingford. "Then let us drink to France, and to the Health to her People!"</p>
-                
-                <p>And so with each Glass spent, a new Toast was ventured:</p>
-                
-                <p>"To Scottish Soil—so generous to unbid Guests!"</p>
-                <p>"To Whitehaven's charr'd Ships—and the Ass who spared the Town!"</p>
-                <p>"To the Ranger—where Defeat wears the garb of Honor!"</p>
-                <p>"To Privateering—where the Pirates of today become the Patriots of tomorrow!"</p>
-                <p>"To the Earl's absence—may it teach Humility to scheming Men!"</p>
-                <p>"To the Douglases' Silver—may it purchase Forgiveness in Ale!"</p>
-                <p>"To King George—may his Reign outlast our Evasion!"</p>
-                <p>"To Countess Selkirk's Fortitude—may it shame the Furies!"</p>
-                <p>"To young Thomas Douglas—may he prove a Gentleman!"</p>
-                <p>"To Captain Jones—may his Boldness ever outstrip his Judgment!"</p>
-                
-                <p>And whilst this Transaction unfolded, a coarse Homespun Sack was fetched by Clarissa, the Governess, and the Maidservants. Daniel, in a moment of Genius, saw fit to fill it near entirely with Coal, allowing but a Quarter of its Contents for the Silver Tea-Plate.</p>
-                
-                <p>"A Toast," Lieutenant Wallingford at last proclaimed, raising his Glass, "to the Continental Navy!" And with that, he quaffed its Contents in one Mighty Swallow.</p>
-                
-                <p>The Crew made their Leisurely Exit, bearing their Questionable Plunder, and embarked upon the Longboats, pulling for the Ranger with unseemly Haste.</p>
-                
-                <p>Aboard the Ranger, the Crew staggered about in Drunken Disarray, their Footfalls heavy upon the Quarterdeck as they Resumed their Duties. Lieutenant Simpson, vexed by this Display of Indiscipline, was summoned to the Wardroom, where their so-called Prize was unveiled.</p>
-                
-                <p>"Where is the Bloody Earl?" Lieutenant Simpson thundered, his Voice piercing the Stagnant Air that Lingered inside.</p>
-                
-                <p>"The Earl was not at Home," Captain Jones admitted with feigned Resignation. "His Wife, the Countess Selkirk, saw fit to part with her Household Silver," and motioned for the Sack.</p>
-                
-                <p>The Sack was upended upon the Table, the Silver Tea-Plate clattering against the polished Wood—followed by a Deluge of Coal, which spilled forth in a Cascade of Vantalback, a Void decanting upon the table.</p>
-                
-                <p>The Officers stood Transfixed, their Shock rendering them Statuesque. Lieutenant Simpson's Head snapped back, and he mustered a Laugh—Mirthless, swelling in Volume until it filled the Cabin. He walked to the Table, seized a Lump of Coal, and turned it over in his Hand.</p>
-                
-                <p>"Silver... aye—but the Bulk of it is... Coal—" And with a sweep of his Arm, he sent the Coal flying from the Table, the Pieces striking the Bulkhead and shattering into Dust and tiny Shards.</p>
-                
-                <p><strong>Ranger, Brest, 8th May, 1778</strong></p>
-                
-                <p>Madam—</p>
-                
-                <p>It cannot be too much lamented that in the Profession of Arms, the Officer of fine Feelings, and of real Sensibility, should be under the Necessity of winking at any Action of Persons under his Command, which his Heart cannot approve—but the Reflection is doubly severe when he finds himself Obliged, in Appearance, to countenance such Action by his Authority.</p>
-                
-                <p>This hard Case was mine when on the 23rd of April last I landed on St Mary's Isle. Knowing Lord Selkirk's Interest with his King, and esteeming as I do his private Character; I wished to make him the happy Instrument of alleviating the Horrors of hopeless Captivity, when the Brave are overpowered and made Prisoners of War.</p>
-                
-                <p>It was perhaps fortunate for you Madam that he was from Home; for it was my Intention to have taken him on board the Ranger, and to have detained him till thro' his Means, a general and fair Exchange of Prisoners, as well in Europe as in America had been effected.</p>
-                
-                <p>When I was informed by some Men whom I met at Landing, that his Lordship was absent; I walked back to my Boat determining to leave the Island: by the Way, however, some Officers who were with me could not forbear expressing their Discontent; observing that in America no Delicacy was shown by the English; who took away all sorts of moveable Property, setting Fire not only to Towns and to Houses of the Rich without Distinction; but not even sparing the wretched Hamlets and Milch Cows of the Poor and helpless at the Approach of an inclement Winter. That Party had been with me, as Volunteers, the same Morning at Whitehaven; some Complaisance therefore was their Due. I had but a Moment to think how I might gratify them, and at the same Time do your Ladyship the least Injury. I charged the Two Officers to permit none of the Seamen to enter the House, or to hurt anything about it—To treat you, Madam, with the utmost Respect—to accept of the Plate which was offered—and to come away without making a Search or demanding anything else.</p>
-                
-                <p>I am induced to believe that I was punctually Obeyed; since I am informed that the Plate which they brought away is far short of the Inventory which accompanied it. I have gratified my Men; and when the Plate is sold, I shall become the Purchaser, and I will gratify my own Feelings by restoring it to you, by such Conveyance as you shall be pleased to direct.</p>
-                
-                <p>Had the Earl been on board the Ranger the following Evening he would have seen the awful Pomp and dreadful Carnage of a Sea Engagement, both affording ample Subject for the Pencil, as well as melancholy Reflection for the contemplative Mind. Humanity starts back from such Scenes of Horror, and cannot but execrate the vile Promoters of this detested War.</p>
-                
-                <p>For They, 'twas THEY unsheath'd the ruthless Blade, And Heav'n shall ask the Havock it has made. The British Ship of War, Drake, mounting 20 Guns, with more than her full Complement of Officers and Men, besides a Number of Volunteers, came out from Carrickfergus, in order to attack and take the American Continental Ship of War, Ranger, of 18 Guns and short of her Complement of Officers and Men. The Ships met, and the Advantage was disputed with great Fortitude on each Side for an Hour and Five Minutes, when the gallant Commander of the Drake fell, and Victory declared in favor of the Ranger. His amiable Lieutenant lay mortally wounded besides near forty of the inferior Officers and Crew killed and wounded. A melancholy Demonstration of the Uncertainty of human Prospects, and of the sad Reverse of Fortune which an Hour can produce. I buried them in a spacious Grave, with the Honors due to the Memory of the Brave.</p>
-                
-                <p>Tho' I have drawn my Sword in the present generous Struggle for the Rights of Men; yet I am not in Arms as an American, nor am I in pursuit of Riches. My Fortune is liberal enough, having no Wife nor Family, and having lived long enough to know that Riches cannot ensure Happiness. I profess myself a Citizen of the World, totally unfettered by the little mean Distinctions of Climate or of Country, which diminish the Benevolence of the Heart and set Bounds to Philanthropy. Before this War begun I had at an early Time of Life, withdrawn from the Sea Service, in favor of "calm Contemplation and Poetic Ease." I have sacrificed not only my favorite Scheme of Life, but the softer Affections of the Heart and my Prospects of Domestic Happiness—And I am ready to sacrifice Life also with Cheerfulness—if that Forfeiture could restore Peace and Goodwill among Mankind.</p>
-                
-                <p>As the Feelings of your gentle Bosom cannot but be congenial with mine—let me entreat you Madam to use your soft persuasive Arts with your Husband to endeavor to stop this Cruel and destructive War, in which Britain can never succeed. Heaven can never countenance the barbarous and unmanly Practices of the Britons in America, which Savages would Blush at; and which if not discontinued will soon be retaliated in Britain by a justly enraged People. Should you fail in this, (for I am persuaded you will attempt it; and who can resist the Power of such an Advocate?) Your Endeavors to effect a general Exchange of Prisoners, will be an Act of Humanity, which will afford you golden Feelings on a Death bed.</p>
-                
-                <p>I hope this cruel Contest will soon be closed; but should it continue, I wage no War with the Fair. I acknowledge their Power, and bend before it with profound Submission; let not therefore the amiable Countess of Selkirk regard me as an Enemy. I am ambitious of her Esteem and Friendship, and would do anything consistent with my Duty to merit it.</p>
-                
-                <p>The Honor of a Line from your Hand in Answer to this will lay me under a very singular Obligation; and if I can render you any acceptable Service in France or elsewhere, I hope you see into my Character so far as to command me without the least Grain of Reserve. I wish to know exactly the Behavior of my People, as I determine to punish them if they have exceeded their Liberty.</p>
-                
-                <p>I have the Honor to be with much Esteem and with profound Respect, Madam,</p>
-                
-                <p>Your most Obedient and most humble Servant</p>
-                
-                <p>—Jno P Jones</p>
-                
-                <p>Several Years had elapsed since the Raid upon Douglas Castle by the Crew of the Ranger. The American Republic had Won her Independence. The Earl, ever consumed by Rage and wounded Pride at the Affront, the Silver Tea-Plate having been the subject of protracted Legal Proceedings, never fully recovered from the Indignity visited upon his Household.</p>
-                
-                <p>"And to think I once pledged my support to the American Cause!" proclaimed the Earl, Lord Dunbar Douglas, seated at the Head of the Table. "Folly! These Americans are but Rogues—Villains, I say! What Rights and Liberties we cherish as Englishmen have been swept away—lost in the Undertow upon those Rebellious Shores!"</p>
-                
-                <p>"Pray, my Dear," interposed Countess Selkirk, her Voice measured yet firm, "our Young Thomas was spared, and consider what Fate might have befallen you had you been at Home? You might have perished in that engagement with the Drake! 'Twas Providence itself that spared you abroad that Day. The Silver is but Penance to what is Afforded by our Flesh and Blood."</p>
-                
-                <p>"Bah!—" Lord Douglas scoffed. "'Tis the Principle that galls me! Those Brigands violated the Sanctity of our Home!"</p>
-                
-                <p>The Argument, protracting and Fruitless, was interrupted by the Clatter of Hooves and the Rumble of Carriage-Wheels outside. The Coachman's cry of "Ho!" pierced the air, followed by the Stamping and Nighing of Horses brought to a sudden Halt against their Reins. A Royal Mail Coach, resplendent in Black and Scarlet, had drawn up beyond the Gardens, and a Figure crowned with a Black Hat adorned with a Gold Band, clad in an Elaborate Coat of Scarlet with Azure Lapels, picked his way through the boxwood hedges of the garden.</p>
-                
-                <p>Countess Selkirk hastened to the Door and received the Postman, who removed his Hat and said, "G'day, Madam. A Parcel for your Ladyship," proffering a Bundle wrapped in Brown Paper. With a murmured "Thank you, sir," and a curtsy, she bore the Package to the Breakfast Room, where she laid it upon the Table and tore away the Wrapping, revealing within the very Tea-Plate stolen by the Crew of the Ranger, the Tea-Leaves from that April Morning still clinging to the surface, a reminder of a day when Yankee Doodle treaded upon Old Albion's shores.</p>
+            <div class="quote">
+                <i>"Now and then we had a hope that if we lived and were good, God would permit us to be pirates."</i><br>—MARK TWAIN
             </div>
             
-            <a href="index.html" class="back-link">← Back to all stories</a>
+            <p>At Noon on the 23rd of April in the Year 1778, the American Sloop-of-War, the Ranger, sailed into the Soloway Firth, riding uneasily at Anchor off St. Mary's Isle—a peninsula and the Ancient seat of the Douglas family, its sole inhabitants. The Isle was gloomily Shrouded in the dim Fog, as though it were the only Tract of Land within the peripheral Sight of a Sailor. As the Tide began to Ebb, flowing outward past Kirkcudbright Bay, toward the Irish Sea, a Boy—the young Thomas Douglas, Heir to the Earl of Selkirk—curiously stood in the Gardens of the Douglas Castle, peering through a Spyglass at the unheralded Vessel. Observing a Flag of Thirteen Red and White Stripes, with a Canton of Blue, and White Stars fluttering upon its Halyard, showing bravely like a Constellation—did the young Douglas then engage in the lighthearted and playful Equivocation of counting each Star, forestalling his Day's Chores. When reaching the Ninth Star, Thomas was seized by the Governess of his Family's Estate and she swiftly whisked him away.</p>
+            
+            <p>Captain John Paul Jones, in Command of the Ranger, collapsed his Spyglass and paced the Starboard Side of the Quarterdeck. To the Larboard Side, First Lieutenant Simpson and Lieutenant Wallingford watched the Captain's restless Traipse, much like a Billiard-Ball in a Game of Cue.</p>
+            
+            <p>"Pray, I reckon the Cap'n is yet undecided," remarked Lieutenant Simpson, his Words laced with an Air of Vexation.</p>
+            
+            <p>"It would seem," replied Lieutenant Wallingford, "that the Captain is bound by Newton's Third Law of Motion."</p>
+            
+            <p>A Pause. "Eh?" Simpson, brow furrowed.</p>
+            
+            <p>"Why, 'tis purely Newtonian, the Captain's Demeanor! Viz.—For every Action, there is an equal and opposite Reaction. The Douglases have proven as much." Nodding his Pate sagely. His breath effusive with Alcohol.</p>
+            
+            <p>"Speak plainly, Man," Simpson, firm in rejoinder.</p>
+            
+            <p>"Oh." Wallingford, hurried. "I mean only to say that the Captain's Hesitation springs from a Matter most Personal—"</p>
+            
+            <p>"There." Simpson interjected. "That suffices. If only you were Equally as Intelligent when Sober." He rocked upon his Heels and cast his Gaze upon the Yard of the Spanker Sail as it sway'd gently in the Breeze.</p>
+            
+            <p>"You know," began Lieutenant Wallingford, "'tis whispered that the Captain himself is a Bastard offspring of the Selkirks."</p>
+            
+            <p>"Arghl—Selkirks be damn'd! Curse your drunkenness! We have our Orders, by G—d!" And with that, Lieutenant Simpson storm'd off across the Quarterdeck toward the Captain, Lieutenant Wallingford following at length to his Heel.</p>
+            
+            <p>The Manner in which they approached the Captain near provoked him to lay Hand upon his Sword. Still aggrieved by the Failure at Whitehaven—a Venture most Ill-shared—the Crew having grown reluctant to "destroy the Property of poor People," as Lieutenant Wallingford had confessed after the Attack. Their Privateering exploits in the British Isles had thus far proved poorly, yielding but two Prizes of little worth: a pair of Fruit-Laden Vessels of ill-repute and the Lord Chatham, whose Hold contained only a Hundred Hogsheads of English Porter—enough, the Captain fancied, to quiet a Crew already simmering with Discontent, yet sufficient also, in his Folly, to sustain the Drunken Rage of those Undisciplined Matelots who now despised him the more for it.</p>
+            
+            <p>"Your Orders, Sir?" Lieutenant Simpson inquired with ease.</p>
+            
+            <p>The Captain drew himself upright, his Breast heaving with a weary Sigh. "I have resolved to go Ashore. Lieutenant Wallingford and Master Cullam shall attend me. Lieutenant Simpson, you will remain Aboard with Lieutenant Meijer and Lieutenant Hall. We take Thirty of our Men ashore."</p>
+            
+            <p>"Aye, Sir," replied Simpson, who no sooner withdrew to the Main Deck to help muster the Raiding Party—In Truth, Lieutenant Simpson seethed with silent Indignation. As First Lieutenant of the Ranger, he sustained a bitter Conviction that the Captain had slighted him—a Belief that had festered since their Landfall in France, when he had expected to assume Command of the Ship. Their Relationship had become a Fraught, with frequent Disputes over Matters of Leadership and private Quarrels that strained both of the Men's patience.</p>
+            
+            <p>Before long, two Longboats were lowered from the Ranger, and Thirty of her Motley Crew rowed toward the Docks of Douglas Castle.</p>
+            
+            <p>"G—d strike me dead," muttered Lieutenant Simpson, "for I wish that they capsized," his Voice dry as he watched the Boats pull for Land.</p>
+            
+            <p>As the Longboats hauled for Shore, the Raiding Party, led by Lieutenant Walligford and Master Cullam, were first to set upon the Docks. Like Dogs, the Disreputable Gaggle of Men, some bearded, tattooed, and one-eyed, armed with Cutlasses, Dirks, and Flintlocks, picked their way to the Castle, with Lieutenant Wallingford, and Master Cullam at their Head.</p>
+            
+            <p>"Put your backs into it, men!" Shouted Captain Jones as his Longboat lazily pulled to shore.</p>
+            
+            <p>Wallingford, Cullam and their Party picked their way up to Douglas Castle, ransacking the Gardens lined with Boxwood, until they stood before the Great Door—Majestickal, yet strangely Unassuming.</p>
+            
+            <p>Master Cullam beat upon the Door with the Pommel of his Cutlass, near splitting the Oak with his blows.</p>
+            
+            <p>"Open this Door, damn your Eyes!" bellowed Master Cullam. "David!" he roared, turning to the party, "Where is David?"</p>
+            
+            <p>David Freeman, who at Whitehaven had spoiled the Attack by slipping from the Crew to knock upon every Door in Marlborough Street, warning the townsfolk of the coming Conflagration. He was thrust forward through the Ranks of Men, and answering the Master's summons, said: "Aye, Sir?"</p>
+            
+            <p>"You've shown Talent for Door-Knocking, have you not? Well then—to it! And D—I take ye if ye don't!"</p>
+            
+            <p>David Freeman obeyed, hastily rapping his Knuckles against the Great Door, much to the amusement of the crew.</p>
+            
+            <p>Within, Countess Selkirk, fraught with Child and but lately risen from her Breakfast, spoke calmly: "Daniel, pray, see who is outside."</p>
+            
+            <p>"'Tis Pirates, Madam! Pirates, I say!" shrieked the Governess. "Was Providence alone that spared Young Thomas when I found him spying on their ship!"</p>
+            
+            <p>"Now, now, Clarissa," said Countess Selkirk, her Voice measured though the Knocking which echoed through the Hall. "Calm yourself. Daniel, if you would, please?"</p>
+            
+            <p>"At once, My Lady," replied Daniel, making his Bow before approaching the Door.</p>
+            
+            <p>"State your Business?" he called through the Door.</p>
+            
+            <p>Master Cullam, thrusting David Freeman aside, shouted: "Open this Door! We've come for the Earl! Hand him over—and swiftly! May G—d have Mercy on ye!"</p>
+            
+            <p>Daniel, maintaining his Customary Composure and Gentleman's Demeanor, replied: "The Earl is not home, sir. If you Gentlemen be a Press-Gang from the Royal Navy, I fear you'll find no Seamen here to press."</p>
+            
+            <p>"The Earl is not at Home?" David Freeman repeated with careless Disregard.</p>
+            
+            <p>"He is not, Sir," Daniel maintained with Composure. At this, David broke from the Crew, shoved past Master Cullam, and scurried back toward the Docks to bear Tidings to the Captain.</p>
+            
+            <p>The Captain's Longboat had but made Landfall, its Raiders mounting the Docks. Upon hearing of the Earl's Absence, Captain Jones resolved to retreat to the Longboat, where he feigned to submit to the news, knowing full well the mutinous air that Lingered among the Crew.</p>
+            
+            <p>"Inform Lieutenant Wallingford and Master Cullam that no Men are to enter the House. We must not depart without some Token of our Visit. If they should procure an Object of Worth, that shall suffice."</p>
+            
+            <p>"Aye, Sir," David acknowledged, then hurried back to the Raiding Party with all Haste and informed the Officers, who were still barr'd at the entrance.</p>
+            
+            <p>"Argh!" roared Master Cullam, beating the door once more, "I know well what needs Pressing, you Impudent little—"</p>
+            
+            <p>"Enough, Master Cullam," interposed Lieutenant Wallingford. "Sir," he continued mildly, "we are no Men of the Royal Navy, but Free Sailors of the Continental Navy—Americans all."</p>
+            
+            <p>"Americans?" David repeated, the unfamiliar Demonym first confounding him, breaking through his usual Reserve.</p>
+            
+            <p>Then, no sooner had Countess Selkirk emerged from the Breakfast Room to investigate the Confusion herself.</p>
+            
+            <p>"What ever is this Disturbance about, Daniel?" inquired Countess Selkirk.</p>
+            
+            <p>"'Tis the Americans, My Lady."</p>
+            
+            <p>Having briefly parted the Drapes to observe the Cutlass and Pistol-wielding Crew did her Mouth fell agape, momentarily, before she swiftly regained her Composure. Upon opening the Door, she beheld Lieutenant Wallingford and Master Cullam in the threshold, in their Full Dress Uniforms, flanked by Thirty rough Seamen who stood in uneasy Repose, their Eyes naturally drawn to her Bosom.</p>
+            
+            <p>"Good Day, Madam," said Lieutenant Wallingford, removing his Tricorn. "My name is Lt. Samuel Wallingford, and this is my subordinate, Mstr. David Cullam. Might I and my Subordinate, Master Cullam. May we enter?"</p>
+            
+            <p>"Y-Yes, please" she answered abruptly, scarcely considering her Decision, and gestured them entry. They removed to the Drawing Room where their Discourse continued.</p>
+            
+            <p>"Now then," she exhaled sharply, "I insist upon an Explanation for this Outrageous Invasion of our Privacy. What do you Men want?"</p>
+            
+            <p>"My Lady," began Lieutenant Wallingford, smoothly, "I most Sincerely apologize for the Disturbance. I have Orders from my Captain, Mr. John Paul Jones, advised himself by Mister Benjamin Franklin, Envoy at the Court of Versailles in Paris, to take your Husband, the Earl, into our Custody. You are doubtless aware of the Hostilities between America and Great Britain. We mean to employ the Earl as Leverage in London, you see, to secure the Release of American Prisoners captured at Sea."</p>
+            
+            <p>"My Husband is not at Home," she stated curtly, implying that even were he Present, he would never surrender himself to such a mangy Band of Uncouth Sailors.</p>
+            
+            <p>Lieutenant Wallingford paused for a moment, then with a Smile replied: "It matters not, My Lady," he cast his Gaze upward to the Ceiling, detecting a faint Cascade of Footfalls from the Upper Chambers—in Truth, it was the Maidservants restraining Young Thomas, the Boy's Ear pressed flush against the Floorboards as he listened to every Word of the Conversation below. "His Son is at Home, of that I've no Doubt. We shall have him Instead."</p>
+            
+            <p>At this Proposition, Countess Selkirk drew herself up to her full Height, her Bosom swelling, Arms akimbo, and pouting, declared: "You will have to kill me before you take my Son!"</p>
+            
+            <p>Lieutenant Wallingford entreated her for Composure, vowing no Harm should befall any within the Household. Thus pacified, she ushered the Men into the Breakfast Parlor, proffering the Family's Silver-Tea Plate as Renumeration in lieu of the Earl's absence. She summoned her Maids from their Upstairs refuge, who served Whiskey to the Sailors milling about in the Gardens.</p>
+            
+            <p>As the Hour progressed, what began as strained Hospitality devolved into something resembling Gin Lane. The Crewmen, now emboldened under the spell of Alcholick Reverie, wandered the Halls at will—much to the consternation of Daniel, the Butler, whose frantic Vigilance alone preserved the Family's Georgian Treasures from disappearing into their Thieving Hands. The Maids, whose pleasure the Sailors would doubtless have preferred, proved more effective than poor Daniel in keeping the Men at bay.</p>
+            
+            <p>Over wine, Lieutenant Wallingford and Master Cullam ingratiated Countess Selkirk's forbearance through a succession of Toasts, which seemed endless.</p>
+            
+            <p>"My Lady," said Lieutenant Wallingford, "A Toast to your Health and to your Unborn Child." Raising his Glass, he threw back his Nob and took a hearty Swig, then regarded his Hostess with widened Eyes. "I declare, 'tis exceptional! Do you not agree?'" Here he elbowed Master Cullam. "Surely among the finest you've tasted?"</p>
+            
+            <p>Master Cullam chuckled and nodded. "'Tis fine, Madam. Though I'll warrant these Climes don't favor Vineyards?'"</p>
+            
+            <p>"Indeed not," she replied, replenishing their Glasses, "the Grapes were harvested in the Vendée, in the Loire Valley."</p>
+            
+            <p>"A French Wine!" exclaimed Lieutenant Wallingford. "Then let us drink to France, and to the Health to her People!"</p>
+            
+            <p>And so with each Glass spent, a new Toast was ventured:</p>
+            
+            <p>"To Scottish Soil—so generous to unbid Guests!"</p>
+            <p>"To Whitehaven's charr'd Ships—and the Ass who spared the Town!"</p>
+            <p>"To the Ranger—where Defeat wears the garb of Honor!"</p>
+            <p>"To Privateering—where the Pirates of today become the Patriots of tomorrow!"</p>
+            <p>"To the Earl's absence—may it teach Humility to scheming Men!"</p>
+            <p>"To the Douglases' Silver—may it purchase Forgiveness in Ale!"</p>
+            <p>"To King George—may his Reign outlast our Evasion!"</p>
+            <p>"To Countess Selkirk's Fortitude—may it shame the Furies!"</p>
+            <p>"To young Thomas Douglas—may he prove a Gentleman!"</p>
+            <p>"To Captain Jones—may his Boldness ever outstrip his Judgment!"</p>
+            
+            <p>And whilst this Transaction unfolded, a coarse Homespun Sack was fetched by Clarissa, the Governess, and the Maidservants. Daniel, in a moment of Genius, saw fit to fill it near entirely with Coal, allowing but a Quarter of its Contents for the Silver Tea-Plate.</p>
+            
+            <p>"A Toast," Lieutenant Wallingford at last proclaimed, raising his Glass, "to the Continental Navy!" And with that, he quaffed its Contents in one Mighty Swallow.</p>
+            
+            <p>The Crew made their Leisurely Exit, bearing their Questionable Plunder, and embarked upon the Longboats, pulling for the Ranger with unseemly Haste.</p>
+            
+            <p>Aboard the Ranger, the Crew staggered about in Drunken Disarray, their Footfalls heavy upon the Quarterdeck as they Resumed their Duties. Lieutenant Simpson, vexed by this Display of Indiscipline, was summoned to the Wardroom, where their so-called Prize was unveiled.</p>
+            
+            <p>"Where is the Bloody Earl?" Lieutenant Simpson thundered, his Voice piercing the Stagnant Air that Lingered inside.</p>
+            
+            <p>"The Earl was not at Home," Captain Jones admitted with feigned Resignation. "His Wife, the Countess Selkirk, saw fit to part with her Household Silver," and motioned for the Sack.</p>
+            
+            <p>The Sack was upended upon the Table, the Silver Tea-Plate clattering against the polished Wood—followed by a Deluge of Coal, which spilled forth in a Cascade of Vantalback, a Void decanting upon the table.</p>
+            
+            <p>The Officers stood Transfixed, their Shock rendering them Statuesque. Lieutenant Simpson's Head snapped back, and he mustered a Laugh—Mirthless, swelling in Volume until it filled the Cabin. He walked to the Table, seized a Lump of Coal, and turned it over in his Hand.</p>
+            
+            <p>"Silver... aye—but the Bulk of it is... Coal—" And with a sweep of his Arm, he sent the Coal flying from the Table, the Pieces striking the Bulkhead and shattering into Dust and tiny Shards.</p>
+            
+            <p><strong>Ranger, Brest, 8th May, 1778</strong></p>
+            
+            <p>Madam—</p>
+            
+            <p>It cannot be too much lamented that in the Profession of Arms, the Officer of fine Feelings, and of real Sensibility, should be under the Necessity of winking at any Action of Persons under his Command, which his Heart cannot approve—but the Reflection is doubly severe when he finds himself Obliged, in Appearance, to countenance such Action by his Authority.</p>
+            
+            <p>This hard Case was mine when on the 23rd of April last I landed on St Mary's Isle. Knowing Lord Selkirk's Interest with his King, and esteeming as I do his private Character; I wished to make him the happy Instrument of alleviating the Horrors of hopeless Captivity, when the Brave are overpowered and made Prisoners of War.</p>
+            
+            <p>It was perhaps fortunate for you Madam that he was from Home; for it was my Intention to have taken him on board the Ranger, and to have detained him till thro' his Means, a general and fair Exchange of Prisoners, as well in Europe as in America had been effected.</p>
+            
+            <p>When I was informed by some Men whom I met at Landing, that his Lordship was absent; I walked back to my Boat determining to leave the Island: by the Way, however, some Officers who were with me could not forbear expressing their Discontent; observing that in America no Delicacy was shown by the English; who took away all sorts of moveable Property, setting Fire not only to Towns and to Houses of the Rich without Distinction; but not even sparing the wretched Hamlets and Milch Cows of the Poor and helpless at the Approach of an inclement Winter. That Party had been with me, as Volunteers, the same Morning at Whitehaven; some Complaisance therefore was their Due. I had but a Moment to think how I might gratify them, and at the same Time do your Ladyship the least Injury. I charged the Two Officers to permit none of the Seamen to enter the House, or to hurt anything about it—To treat you, Madam, with the utmost Respect—to accept of the Plate which was offered—and to come away without making a Search or demanding anything else.</p>
+            
+            <p>I am induced to believe that I was punctually Obeyed; since I am informed that the Plate which they brought away is far short of the Inventory which accompanied it. I have gratified my Men; and when the Plate is sold, I shall become the Purchaser, and I will gratify my own Feelings by restoring it to you, by such Conveyance as you shall be pleased to direct.</p>
+            
+            <p>Had the Earl been on board the Ranger the following Evening he would have seen the awful Pomp and dreadful Carnage of a Sea Engagement, both affording ample Subject for the Pencil, as well as melancholy Reflection for the contemplative Mind. Humanity starts back from such Scenes of Horror, and cannot but execrate the vile Promoters of this detested War.</p>
+            
+            <p>For They, 'twas THEY unsheath'd the ruthless Blade, And Heav'n shall ask the Havock it has made. The British Ship of War, Drake, mounting 20 Guns, with more than her full Complement of Officers and Men, besides a Number of Volunteers, came out from Carrickfergus, in order to attack and take the American Continental Ship of War, Ranger, of 18 Guns and short of her Complement of Officers and Men. The Ships met, and the Advantage was disputed with great Fortitude on each Side for an Hour and Five Minutes, when the gallant Commander of the Drake fell, and Victory declared in favor of the Ranger. His amiable Lieutenant lay mortally wounded besides near forty of the inferior Officers and Crew killed and wounded. A melancholy Demonstration of the Uncertainty of human Prospects, and of the sad Reverse of Fortune which an Hour can produce. I buried them in a spacious Grave, with the Honors due to the Memory of the Brave.</p>
+            
+            <p>Tho' I have drawn my Sword in the present generous Struggle for the Rights of Men; yet I am not in Arms as an American, nor am I in pursuit of Riches. My Fortune is liberal enough, having no Wife nor Family, and having lived long enough to know that Riches cannot ensure Happiness. I profess myself a Citizen of the World, totally unfettered by the little mean Distinctions of Climate or of Country, which diminish the Benevolence of the Heart and set Bounds to Philanthropy. Before this War begun I had at an early Time of Life, withdrawn from the Sea Service, in favor of "calm Contemplation and Poetic Ease." I have sacrificed not only my favorite Scheme of Life, but the softer Affections of the Heart and my Prospects of Domestic Happiness—And I am ready to sacrifice Life also with Cheerfulness—if that Forfeiture could restore Peace and Goodwill among Mankind.</p>
+            
+            <p>As the Feelings of your gentle Bosom cannot but be congenial with mine—let me entreat you Madam to use your soft persuasive Arts with your Husband to endeavor to stop this Cruel and destructive War, in which Britain can never succeed. Heaven can never countenance the barbarous and unmanly Practices of the Britons in America, which Savages would Blush at; and which if not discontinued will soon be retaliated in Britain by a justly enraged People. Should you fail in this, (for I am persuaded you will attempt it; and who can resist the Power of such an Advocate?) Your Endeavors to effect a general Exchange of Prisoners, will be an Act of Humanity, which will afford you golden Feelings on a Death bed.</p>
+            
+            <p>I hope this cruel Contest will soon be closed; but should it continue, I wage no War with the Fair. I acknowledge their Power, and bend before it with profound Submission; let not therefore the amiable Countess of Selkirk regard me as an Enemy. I am ambitious of her Esteem and Friendship, and would do anything consistent with my Duty to merit it.</p>
+            
+            <p>The Honor of a Line from your Hand in Answer to this will lay me under a very singular Obligation; and if I can render you any acceptable Service in France or elsewhere, I hope you see into my Character so far as to command me without the least Grain of Reserve. I wish to know exactly the Behavior of my People, as I determine to punish them if they have exceeded their Liberty.</p>
+            
+            <p>I have the Honor to be with much Esteem and with profound Respect, Madam,</p>
+            
+            <p>Your most Obedient and most humble Servant</p>
+            
+            <p>—Jno P Jones</p>
+            
+            <p>Several Years had elapsed since the Raid upon Douglas Castle by the Crew of the Ranger. The American Republic had Won her Independence. The Earl, ever consumed by Rage and wounded Pride at the Affront, the Silver Tea-Plate having been the subject of protracted Legal Proceedings, never fully recovered from the Indignity visited upon his Household.</p>
+            
+            <p>"And to think I once pledged my support to the American Cause!" proclaimed the Earl, Lord Dunbar Douglas, seated at the Head of the Table. "Folly! These Americans are but Rogues—Villains, I say! What Rights and Liberties we cherish as Englishmen have been swept away—lost in the Undertow upon those Rebellious Shores!"</p>
+            
+            <p>"Pray, my Dear," interposed Countess Selkirk, her Voice measured yet firm, "our Young Thomas was spared, and consider what Fate might have befallen you had you been at Home? You might have perished in that engagement with the Drake! 'Twas Providence itself that spared you abroad that Day. The Silver is but Penance to what is Afforded by our Flesh and Blood."</p>
+            
+            <p>"Bah!—" Lord Douglas scoffed. "'Tis the Principle that galls me! Those Brigands violated the Sanctity of our Home!"</p>
+            
+            <p>The Argument, protracting and Fruitless, was interrupted by the Clatter of Hooves and the Rumble of Carriage-Wheels outside. The Coachman's cry of "Ho!" pierced the air, followed by the Stamping and Nighing of Horses brought to a sudden Halt against their Reins. A Royal Mail Coach, resplendent in Black and Scarlet, had drawn up beyond the Gardens, and a Figure crowned with a Black Hat adorned with a Gold Band, clad in an Elaborate Coat of Scarlet with Azure Lapels, picked his way through the boxwood hedges of the garden.</p>
+            
+            <p>Countess Selkirk hastened to the Door and received the Postman, who removed his Hat and said, "G'day, Madam. A Parcel for your Ladyship," proffering a Bundle wrapped in Brown Paper. With a murmured "Thank you, sir," and a curtsy, she bore the Package to the Breakfast Room, where she laid it upon the Table and tore away the Wrapping, revealing within the very Tea-Plate stolen by the Crew of the Ranger, the Tea-Leaves from that April Morning still clinging to the surface, a reminder of a day when Yankee Doodle treaded upon Old Albion's shores.</p>
+
+            </div>
+            
+            <div class="story-navigation">
+                <div class="center-nav">
+                    <a href="index.html" class="nav-button">
+                        <img src="finger_point.png" alt="Back to Stories" class="finger-point">
+                        Back to Stories
+                    </a>
+                </div>
+            </div>
         </article>
     </main>
     
     <footer>
-        <div class="container">
-            <div class="copyright">
-                &copy; 2025 Eclectic. All rights reserved.
-            </div>
+        <div class="copyright">
+            &copy; 2025 Eclectic. All rights reserved.
         </div>
     </footer>
 
     <script>
-        // Tagline Animation Script
+        // Snake Motion Animation for Slogan
         document.addEventListener('DOMContentLoaded', function() {
-            const tagline = "One Thing Leads To Another. Everything Is Connected.";
-            const container = document.getElementById('animatedTagline');
+            const slogan = "One Thing Leads to Another. Everything is Connected.";
+            const container = document.getElementById('animatedSlogan');
             
             if (container) {
                 // Clear any existing content
                 container.innerHTML = '';
                 
                 // Split text into characters and wrap each in a span
-                tagline.split('').forEach((char, index) => {
+                slogan.split('').forEach((char, index) => {
                     const span = document.createElement('span');
-                    span.className = char === ' ' ? 'tagline-char space' : 'tagline-char';
+                    span.className = char === ' ' ? 'snake-char space' : 'snake-char';
                     span.textContent = char === ' ' ? '\u00A0' : char;
-                    span.style.animationDelay = `${index * 0.1}s`;
                     container.appendChild(span);
                 });
-            }
-            
-            // PostHog Analytics
-            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-
-            try {
-                posthog.init('phc_XYDA7DUool5u8LHJOOmLGMBlrD6lQLZmPKZioRxmvO2', {
-                    api_host: 'https://us.i.posthog.com',
-                    loaded: function(posthog) {
-                        console.log('PostHog loaded successfully');
-                    },
-                    capture_pageview: true,
-                    autocapture: {
-                        dom_event_allowlist: ['click', 'submit'],
-                        css_selector_allowlist: ['.tab-btn', '.read-more', '.substack-link']
-                    },
-                    persistence: 'localStorage+cookie'
-                });
-            } catch (e) {
-                console.error('PostHog initialization failed', e);
+                
+                // Function to activate snake motion
+                function startSnakeMotion() {
+                    const chars = container.querySelectorAll('.snake-char');
+                    
+                    // Activate characters in sequence with a snake-like pattern
+                    let delay = 0;
+                    chars.forEach((char, index) => {
+                        setTimeout(() => {
+                            char.classList.add('animating');
+                            
+                            // Remove animating class after animation completes
+                            setTimeout(() => {
+                                char.classList.remove('animating');
+                            }, 1500); // Match the animation duration
+                        }, delay);
+                        
+                        // Increase delay for each character to create wave effect
+                        delay += 80; // Reduced from 100 for smoother flow
+                    });
+                    
+                    // Restart the animation after the full cycle
+                    setTimeout(startSnakeMotion, delay + 1500);
+                }
+                
+                // Start the snake motion
+                startSnakeMotion();
             }
         });
     </script>

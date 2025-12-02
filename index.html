@@ -330,6 +330,60 @@
                 min-height: 45px;
             }
         }
+		
+		/* Substack CTA Styling */
+		.substack-cta {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		background-color: #f8f8f8;
+		border-radius: 8px;
+		border-left: 4px solid #ff6719; /* Substack orange accent */
+	}
+
+		.substack-branding {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 1rem;
+	}
+
+		.substack-logo {
+		height: 40px;
+		width: auto;
+		display: block;
+	}
+
+		.substack-button {
+		display: inline-block;
+		background-color: #ff6719; /* Substack orange */
+		color: white;
+		padding: 12px 24px;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: background-color 0.3s ease;
+		border: none;
+		cursor: pointer;
+	}
+
+		.substack-button:hover {
+		background-color: #e55c17; /* Darker orange on hover */
+		color: white;
+	}
+
+		/* For smaller screens */
+		@media (max-width: 768px) {
+		.substack-branding {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+		.substack-logo {
+        height: 35px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -396,20 +450,28 @@
             </div>
         </section>
         
-        <!-- About Section -->
-        <section id="about" class="content-section">
-            <h2>About</h2>
-            <div class="about-content">
-                <p>Eclectic is a small, one-man operation; a publication of anything and everything. Eclectic yearns to be the home of the passionate, publishing material that is well-written, well-researched, and overall neglected or too archaic, labyrinthine, obsessive, and even grotesque or avant-garde. We find interest in the gritty, the unknown, the unknowable.</p>
-                
-                <p>If you have a penchant to tell a story with obsessive and meticulous detail, Eclectic may just be the home for your work.</p>
-                
-                <div class="substack-cta">
-                    <p>For more stories and regular updates, subscribe to our Substack newsletter:</p>
-                    <a href="https://eclecticmag.substack.com/" class="substack-button" target="_blank">
-                        Subscribe on Substack
-                    </a>
-                </div>
+		<!-- About Section -->
+		<section id="about" class="content-section">
+			<h2>About</h2>
+				<div class="about-content">
+					<p><i>Eclectic</i> is a small, one-man operation; a publication that does not fear delving into topics that may seem entirely adverse to one another. Yet, our slogan remains: 
+					
+					
+					<p><h3><i>One Thing Leads to Another. Everything is Connected.</i></h3></p>
+        
+					<p><i>Eclectic</i> yearns to be the home of the neglected and archaic, favoring the labyrinthine, obsessive, and even grotesque or avant-garde. We find interest in the gritty, the unknown, the unknowable.</p>
+        
+					<p><i>Eclectic</i> is the primary home of Ward Henderson’s (founder and editor-in-chief) short fiction and novel excerpts, with the occasional exploration into the realm of non-fiction on topics relating to cultural critique, lay philosophy, and other academic/journalistic adjacent subjects.</p>
+        
+				<div class="substack-cta">
+				<div class="substack-branding">
+				<img src="Substack_icon.png" alt="Substack Logo" class="substack-logo">
+					<p>For more stories and regular updates, subscribe to our Substack newsletter:</p>
+				</div>
+			<a href="https://eclecticmag.substack.com/" class="substack-button" target="_blank">
+                Subscribe on Substack
+            </a>
+        </div>
                 
                 <div class="contact-form">
                     <h3>Contact Us</h3>

@@ -1,128 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eclectic | One Thing Leads to Another. Everything is Connected.</title>
-    <link rel="icon" type="image/png" href="Eclectic_logo_favicon.png">
-    
-    <!-- PostHog Analytics Integration -->
+    <link rel="icon" type="image/png" href="Eclectic_logo_favicon.png" />
+
+    <!-- PostHog Analytics -->
     <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        ! function(t, e) {
+            var o, n, p, r;
+            e.__SV || (window.posthog = e, e._i = [], e.init = function(i, s, a) {
+                function g(t, e) { var o = e.split(".");
+                    2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function() { t.push([e].concat(Array.prototype.slice.call(arguments,
+                        0))) } }(p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous",
+                    p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") +
+                    "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                var u = e;
+                for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function(t) {
+                        var e = "posthog";
+                        return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                    }, u.people.toString = function() { return u.toString(1) + ".people (stub)" },
+                    o = "init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric"
+                        .split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+                e._i.push([i, s, a])
+            }, e.__SV = 1)
+        }(document, window.posthog || []);
         try {
             posthog.init('phc_XYDA7DUool5u8LHJOOmLGMBlrD6lQLZmPKZioRxmvO2', {
                 api_host: 'https://us.i.posthog.com',
-                loaded: function(posthog) {
-                    console.log('PostHog loaded successfully');
-                },
+                loaded: function(posthog) { console.log('PostHog loaded successfully'); },
                 capture_pageview: true,
-                autocapture: {
-                    dom_event_allowlist: ['click', 'submit'],
-                    css_selector_allowlist: ['.tab-btn', '.read-more', '.substack-link']
-                },
+                autocapture: { dom_event_allowlist: ['click', 'submit'], css_selector_allowlist: ['.tab-btn',
+                        '.read-more', '.substack-link'
+                    ] },
                 persistence: 'localStorage+cookie'
             });
-        } catch (e) {
-            console.error('PostHog initialization failed', e);
-        }
+        } catch (e) { console.error('PostHog initialization failed', e); }
     </script>
-    
+
     <style>
-        /* Reset and base styles */
-        * {
+        /* ── Reset & Base ── */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            /* Warm book‑page palette */
+            --color-bg: #f2ece1;
+            --color-surface: #faf7f0;
+            --color-text: #1e1c18;
+            --color-muted: #6b6256;
+            --color-border: #dcd5c5;
+            --color-accent: #1e1c18;
+            --color-substack: #ff6719;
+            --color-substack-hover: #e05514;
+            --font-serif: "Times New Roman", Times, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(30, 28, 24, 0.06);
+            --shadow-md: 0 8px 24px rgba(30, 28, 24, 0.08);
+            --shadow-lg: 0 16px 48px rgba(30, 28, 24, 0.10);
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: "Times New Roman", Times, serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #fff;
+            font-family: var(--font-serif);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            padding: 32px 24px 60px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        /* Typography */
-        h1, h2, h3 {
-            font-weight: normal;
-            letter-spacing: 0.5px;
+
+        /* ── Typography ── */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 400;
+            letter-spacing: 0.02em;
         }
-        
+
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.6rem;
+            margin-bottom: 4px;
         }
-        
+
         h2 {
-            font-size: 2.2rem;
-            margin: 30px 0 20px;
+            font-size: 2rem;
+            margin: 0 0 32px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            letter-spacing: 0.06em;
+            position: relative;
         }
-        
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--color-text);
+            margin: 10px auto 0;
+            opacity: 0.3;
+        }
+
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 10px;
+            letter-spacing: 0.03em;
         }
-        
+
         p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #2a2620;
         }
-        
-        /* Header */
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ── Header ── */
         header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
+            margin-bottom: 48px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--color-border);
         }
-        
+
         .logo-container {
-            max-width: 400px;
-            margin: 0 auto 8px;
+            max-width: 360px;
+            margin: 0 auto 10px;
         }
-        
         .logo-container img {
             width: 100%;
             height: auto;
+            display: block;
         }
-        
+
         .slogan {
             font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            position: relative;
-            overflow: hidden;
-            min-height: 50px;
+            font-size: 1.15rem;
+            min-height: 56px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 6px 0 20px;
+            letter-spacing: 0.02em;
+            color: var(--color-muted);
         }
-        
         .slogan-text {
             display: inline-block;
         }
-        
-        /* Improved Snake Motion Animation - Smoother */
+
+        /* ── Snake animation ── */
         .snake-char {
             display: inline-block;
-            position: relative;
             transform-origin: center;
+            transition: none;
         }
-        
         .snake-char.animating {
             animation: snakeWave 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
-        
         .snake-char.space {
             width: 0.3em;
         }
-        
+
         @keyframes snakeWave {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -143,259 +197,428 @@
                 transform: translateY(0) rotate(0deg);
             }
         }
-        
-        /* Navigation */
+
+        /* ── Navigation ── */
         nav ul {
             display: flex;
             justify-content: center;
             list-style: none;
-            gap: 30px;
+            gap: 36px;
+            flex-wrap: wrap;
         }
-        
+
         nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.1rem;
-            padding: 5px 0;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s;
+            font-size: 1.05rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color var(--transition), color var(--transition);
+            letter-spacing: 0.04em;
+            color: var(--color-muted);
         }
-        
         nav a:hover,
         nav a.active {
-            border-bottom: 1px solid #333;
+            border-bottom-color: var(--color-text);
+            color: var(--color-text);
         }
-        
-        /* Content sections */
+
+        /* ── Content sections ── */
         .content-section {
             display: none;
-            margin-bottom: 40px;
+            animation: fadeUp 0.5s ease;
         }
-        
         .content-section.active {
             display: block;
         }
-        
-        /* Enhanced Story Cards - Fully Clickable */
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Story Grid ── */
         .story-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 32px;
         }
-        
+
         .story-card {
-            border: 1px solid #ddd;
-            transition: transform 0.3s, box-shadow 0.3s;
-            overflow: hidden;
             display: block;
-            text-decoration: none;
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid var(--color-border);
             color: inherit;
             cursor: pointer;
         }
-        
         .story-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: #cbc2b0;
         }
-        
+
         .story-img {
             width: 100%;
-            height: 200px;
+            height: 210px;
             object-fit: cover;
-            filter: grayscale(100%);
-            transition: filter 0.3s;
+            filter: grayscale(100%) contrast(1.02);
+            transition: filter var(--transition), transform var(--transition);
+            display: block;
         }
-        
         .story-card:hover .story-img {
-            filter: grayscale(0%);
+            filter: grayscale(0%) contrast(1);
+            transform: scale(1.01);
         }
-        
+
         .story-content {
-            padding: 25px;
+            padding: 24px 26px 22px;
         }
-        
+        .story-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .story-content p {
+            font-size: 0.98rem;
+            color: #3d3830;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
         .story-meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
+            font-size: 0.82rem;
+            color: var(--color-muted);
+            padding-top: 14px;
+            border-top: 1px solid var(--color-border);
+            letter-spacing: 0.02em;
         }
-        
-        /* About section */
+
+        /* ── About ── */
         .about-content {
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto;
         }
-        
-        .substack-cta {
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin: 30px 0;
+        .about-content .about-intro {
+            font-size: 1.1rem;
+            color: #2a2620;
+        }
+        .about-content h3 {
+            font-size: 1.3rem;
+            margin: 24px 0 12px;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--color-text);
             text-align: center;
-            border-left: 3px solid #333;
         }
-        
-        .substack-button {
-            display: inline-block;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin-top: 10px;
+        .about-content h3 i {
+            font-style: italic;
         }
-        
-        /* Contact form */
-        .contact-form {
-            margin-top: 30px;
+
+        /* ── Substack CTA – Redesigned ── */
+        .substack-cta {
+            margin: 40px 0 32px;
+            padding: 32px 36px;
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition), transform var(--transition);
+            text-align: center;
+            position: relative;
         }
-        
-        .form-group {
+        .substack-cta:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        /* subtle decorative line */
+        .substack-cta::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 30%;
+            right: 30%;
+            height: 2px;
+            background: var(--color-substack);
+            border-radius: 0 0 4px 4px;
+            opacity: 0.6;
+        }
+
+        .substack-cta-title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            margin-bottom: 6px;
+            color: var(--color-text);
+        }
+        .substack-cta-title span {
+            background: linear-gradient(135deg, #1e1c18 0%, #4a443c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .substack-cta-desc {
+            font-size: 1rem;
+            color: var(--color-muted);
             margin-bottom: 20px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
+
+        .substack-branding {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+        .substack-branding .substack-logo {
+            height: 36px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.04));
+        }
+        .substack-branding .substack-label {
+            font-size: 0.95rem;
+            color: var(--color-muted);
+            letter-spacing: 0.04em;
+        }
+        .substack-branding .substack-label strong {
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        .substack-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--color-substack);
+            color: #fff;
+            padding: 14px 34px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+            transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(255, 103, 25, 0.20);
+        }
+        .substack-button:hover {
+            background: var(--color-substack-hover);
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(255, 103, 25, 0.30);
+        }
+        .substack-button::after {
+            content: '→';
+            font-size: 1.2rem;
+            transition: transform var(--transition);
+        }
+        .substack-button:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* small note */
+        .substack-cta-note {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+            margin-top: 16px;
+            letter-spacing: 0.03em;
+            opacity: 0.7;
+        }
+
+        /* ── Contact Form ── */
+        .contact-form {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid var(--color-border);
+        }
+        .contact-form h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.04em;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            font-size: 0.92rem;
+            letter-spacing: 0.03em;
+            color: var(--color-muted);
         }
-        
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            font-family: "Times New Roman", Times, serif;
+            padding: 12px 14px;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background: var(--color-surface);
+            font-family: var(--font-serif);
             font-size: 1rem;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            color: var(--color-text);
         }
-        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #b8ad98;
+            box-shadow: 0 0 0 3px rgba(30, 28, 24, 0.04);
+        }
         .form-group textarea {
-            min-height: 150px;
+            min-height: 130px;
             resize: vertical;
         }
-        
+
         .submit-btn {
-            background-color: #333;
-            color: white;
+            background: var(--color-text);
+            color: #fff;
             border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-family: "Times New Roman", Times, serif;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-family: var(--font-serif);
             font-size: 1rem;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            transition: background var(--transition), transform var(--transition);
         }
-        
+        .submit-btn:hover {
+            background: #33302a;
+            transform: scale(1.01);
+        }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .form-status {
-            margin-top: 15px;
-            padding: 10px;
+            margin-top: 16px;
+            padding: 12px 16px;
+            border-radius: 6px;
             display: none;
+            font-size: 0.95rem;
         }
-        
         .form-status.success {
-            background-color: #e8f5e8;
             display: block;
+            background: #edf7ed;
+            color: #1e4a1e;
+            border: 1px solid #c5dbc5;
         }
-        
         .form-status.error {
-            background-color: #ffe8e8;
             display: block;
+            background: #f7eded;
+            color: #4a1e1e;
+            border: 1px solid #dbc5c5;
         }
-        
-        /* Footer */
+
+        /* ── Footer ── */
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-            font-size: 0.9rem;
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
         }
-        
-        /* Responsive */
+
+        /* ── Responsive ── */
         @media (max-width: 768px) {
             body {
-                padding: 15px;
+                padding: 20px 16px 40px;
             }
-            
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 24px;
+            }
             nav ul {
-                flex-direction: column;
-                gap: 10px;
+                gap: 20px;
             }
-            
+            nav a {
+                font-size: 0.95rem;
+            }
             .story-grid {
                 grid-template-columns: 1fr;
+                gap: 24px;
             }
-            
+            .story-content {
+                padding: 20px 22px 18px;
+            }
+            .substack-cta {
+                padding: 24px 20px;
+            }
+            .substack-cta::before {
+                left: 20%;
+                right: 20%;
+            }
+            .substack-branding {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .substack-logo {
+                height: 32px;
+            }
             .slogan {
-                min-height: 45px;
+                font-size: 1rem;
+                min-height: 48px;
+            }
+            .substack-cta-title {
+                font-size: 1.2rem;
             }
         }
-		
-		/* Substack CTA Styling */
-		.substack-cta {
-		margin: 2rem 0;
-		padding: 1.5rem;
-		background-color: #f8f8f8;
-		border-radius: 8px;
-		border-left: 4px solid #ff6719; /* Substack orange accent */
-	}
 
-		.substack-branding {
-		display: flex;
-		align-items: center;
-		gap: 15px;
-		margin-bottom: 1rem;
-	}
-
-		.substack-logo {
-		height: 40px;
-		width: auto;
-		display: block;
-	}
-
-		.substack-button {
-		display: inline-block;
-		background-color: #ff6719; /* Substack orange */
-		color: white;
-		padding: 12px 24px;
-		border-radius: 6px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: background-color 0.3s ease;
-		border: none;
-		cursor: pointer;
-	}
-
-		.substack-button:hover {
-		background-color: #e55c17; /* Darker orange on hover */
-		color: white;
-	}
-
-		/* For smaller screens */
-		@media (max-width: 768px) {
-		.substack-branding {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    
-		.substack-logo {
-        height: 35px;
-    }
-}
-
+        @media (max-width: 480px) {
+            body {
+                padding: 14px 12px 32px;
+            }
+            .logo-container {
+                max-width: 260px;
+            }
+            .story-img {
+                height: 170px;
+            }
+            .submit-btn {
+                width: 100%;
+                text-align: center;
+            }
+            .substack-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <div class="logo-container">
-            <img src="Eclectic_wordmark.png" alt="Eclectic">
+            <img src="Eclectic_wordmark.png" alt="Eclectic" />
         </div>
-        
+
         <div class="slogan">
             <div class="slogan-text" id="animatedSlogan"></div>
         </div>
-        
+
         <nav>
             <ul>
                 <li><a href="#short-stories" class="nav-link active" data-section="short-stories">Short Stories</a></li>
@@ -403,86 +626,105 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <!-- Short Stories Section -->
+
+        <!-- ─── SHORT STORIES ─── -->
         <section id="short-stories" class="content-section active">
             <h2>Short Stories</h2>
             <div class="story-grid">
-                <!-- Story Card 1: VOLTA -->
+
                 <a href="volta.html" class="story-card">
-                    <img src="https://substackcdn.com/image/fetch/$s_!i612!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe40bc51a-1979-4371-8970-9eb0863b6692_1280x970.jpeg" alt="Volta" class="story-img">
+                    <img src="https://substackcdn.com/image/fetch/$s_!i612!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe40bc51a-1979-4371-8970-9eb0863b6692_1280x970.jpeg"
+                    alt="Volta" class="story-img" loading="lazy" />
                     <div class="story-content">
                         <h3>VOLTA</h3>
-                        <p>Unexpectedly and with a tremendous peal, the bomb had detonated along a teeming promenade café. The dense column of smoke sprawled high into the evening sky—some great blossoming on this cruel April day...</p>
+                        <p>Unexpectedly and with a tremendous peal, the bomb had detonated along a teeming promenade café. The dense column of smoke sprawled high into the evening sky—some great blossoming on this cruel April day…</p>
                         <div class="story-meta">
                             <span>23 min read</span>
                             <span>July 15, 2024</span>
                         </div>
                     </div>
                 </a>
-                
-                <!-- Story Card 2: MUD -->
+
                 <a href="mud.html" class="story-card">
-                    <img src="https://substackcdn.com/image/fetch/$s_!okOL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad46cc41-bee9-44d5-939d-8aeee126e5c0_1200x782.jpeg" alt="Mud" class="story-img">
+                    <img src="https://substackcdn.com/image/fetch/$s_!okOL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad46cc41-bee9-44d5-939d-8aeee126e5c0_1200x782.jpeg"
+                    alt="Mud" class="story-img" loading="lazy" />
                     <div class="story-content">
                         <h3>MUD</h3>
-                        <p>A darkened gradient stretched across the sky on this innumerable day. The whistle reverberated throughout the network of trenches; its tinny resolve linked other whistles in an invisible, yet audible web...</p>
+                        <p>A darkened gradient stretched across the sky on this innumerable day. The whistle reverberated throughout the network of trenches; its tinny resolve linked other whistles in an invisible, yet audible web…</p>
                         <div class="story-meta">
                             <span>1 min read</span>
                             <span>July 28, 2024</span>
                         </div>
                     </div>
                 </a>
-                
-                <!-- Story Card 3: SILVER AND COAL -->
+
                 <a href="silver_and_coal.html" class="story-card">
-                    <img src="https://substackcdn.com/image/fetch/$s_!G9r_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2383fb-dc94-4c4d-b0ec-0dcd007df667_4980x2800.jpeg" alt="Silver and Coal" class="story-img">
+                    <img src="https://substackcdn.com/image/fetch/$s_!G9r_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe2383fb-dc94-4c4d-b0ec-0dcd007df667_4980x2800.jpeg"
+                    alt="Silver and Coal" class="story-img" loading="lazy" />
                     <div class="story-content">
                         <h3>SILVER AND COAL</h3>
-                        <p>At Noon on the 23rd of April in the Year 1778, the American Sloop-of-War, the Ranger, sailed into the Soloway Firth, riding uneasily at Anchor off St. Mary's Isle—a peninsula and the Ancient seat of the Douglas family, its sole inhabitants...</p>
+                        <p>At Noon on the 23rd of April in the Year 1778, the American Sloop-of-War, the Ranger, sailed into the Soloway Firth, riding uneasily at Anchor off St. Mary's Isle—a peninsula and the Ancient seat of the Douglas family…</p>
                         <div class="story-meta">
                             <span>14 min read</span>
                             <span>Apr 23, 2025</span>
                         </div>
                     </div>
                 </a>
+
             </div>
         </section>
-        
-		<!-- About Section -->
-		<section id="about" class="content-section">
-			<h2>About</h2>
-				<div class="about-content">
-					<p><i>Eclectic</i> is a small, one-man operation; a publication that does not fear delving into topics that may seem entirely adverse to one another. Yet, our slogan remains: 
-					
-					
-					<p><h3><i>One Thing Leads to Another. Everything is Connected.</i></h3></p>
-        
-					<p><i>Eclectic</i> yearns to be the home of the neglected and archaic, favoring the labyrinthine, obsessive, and even grotesque or avant-garde. We find interest in the gritty, the unknown, the unknowable.</p>
-        
-					<p><i>Eclectic</i> is the primary home of Ward Henderson’s (founder and editor-in-chief) short fiction and novel excerpts, with the occasional exploration into the realm of non-fiction on topics relating to cultural critique, lay philosophy, and other academic/journalistic adjacent subjects.</p>
-        
-				<div class="substack-cta">
-				<div class="substack-branding">
-				<img src="Substack_icon.png" alt="Substack Logo" class="substack-logo">
-					<p>For more stories and regular updates, subscribe to our Substack newsletter:</p>
-				</div>
-			<a href="https://eclecticmag.substack.com/" class="substack-button" target="_blank">
-                Subscribe on Substack
-            </a>
-        </div>
-                
+
+        <!-- ─── ABOUT ─── -->
+        <section id="about" class="content-section">
+            <h2>About</h2>
+            <div class="about-content">
+
+                <p class="about-intro">
+                    <i>Eclectic</i> is a small, one‑man operation; a publication that explores the chaotic interiors and forgotten frontiers of the human condition through fiction. Our slogan remains:
+                </p>
+
+                <h3><i>One Thing Leads to Another. Everything is Connected.</i></h3>
+
+                <p><i>Eclectic</i> prides itself on the neglected and archaic, favoring the labyrinthine, obsessive, grotesque, and avant‑garde in human expression. We find interest in the reading between the lines, picking through the grit of the unknown and the unknowable.</p>
+
+                The primary home of Ward Henderson’s (founder and editor‑in‑chief) short fiction and miscellaneous writings.</p>
+
+                <!-- ─── REDESIGNED SUBSTACK CTA ─── -->
+                <div class="substack-cta">
+                    <div class="substack-cta-title">
+                        <span>Never miss a story</span>
+                    </div>
+                    <p class="substack-cta-desc">
+                        Get new short fiction and essays delivered straight to your inbox.
+                    </p>
+
+                    <div class="substack-branding">
+                        <img src="Substack_icon.png" alt="Substack logo" class="substack-logo" />
+                        <span class="substack-label">Published on <strong>Substack</strong></span>
+                    </div>
+
+                    <a href="https://eclecticmag.substack.com/" class="substack-button" target="_blank" rel="noopener">
+                        Subscribe for free
+                    </a>
+
+                    <div class="substack-cta-note">
+                        No spam, unsubscribe anytime.
+                    </div>
+                </div>
+
+                <!-- Contact -->
                 <div class="contact-form">
                     <h3>Contact Us</h3>
                     <form id="contactForm" action="https://formspree.io/f/xpwlongb" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required />
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required />
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
@@ -492,153 +734,119 @@
                     </form>
                     <div id="formStatus" class="form-status"></div>
                 </div>
+
             </div>
         </section>
+
     </main>
-    
+
     <footer>
-        <div class="copyright">
-            &copy; 2025—2026 Eclectic. All rights reserved.
-        </div>
+        <div class="copyright">&copy; 2025—2026 Eclectic. All rights reserved.</div>
     </footer>
 
     <script>
-        // Tab functionality
         document.addEventListener('DOMContentLoaded', function() {
+
+            // ── Tab navigation ──
             const navLinks = document.querySelectorAll('.nav-link');
-            const contentSections = document.querySelectorAll('.content-section');
-            
-            // Function to activate a section
-            function activateSection(sectionId) {
-                // Remove active class from all links and sections
-                navLinks.forEach(item => item.classList.remove('active'));
-                contentSections.forEach(section => section.classList.remove('active'));
-                
-                // Add active class to clicked link and corresponding section
-                const activeLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
-                const activeSection = document.getElementById(sectionId);
-                
-                if (activeLink) activeLink.classList.add('active');
-                if (activeSection) activeSection.classList.add('active');
+            const sections = document.querySelectorAll('.content-section');
+
+            function activateSection(id) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+
+                const link = document.querySelector(`.nav-link[data-section="${id}"]`);
+                const section = document.getElementById(id);
+                if (link) link.classList.add('active');
+                if (section) section.classList.add('active');
             }
-            
-            // Check for hash in URL on page load
+
+            // Handle hash on load
             if (window.location.hash) {
-                const sectionFromHash = window.location.hash.substring(1); // Remove the # symbol
-                activateSection(sectionFromHash);
+                const id = window.location.hash.substring(1);
+                activateSection(id);
             } else {
-                // Default to short-stories if no hash
                 activateSection('short-stories');
             }
-            
+
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    const sectionId = this.getAttribute('data-section');
-                    // Update URL hash without scrolling
-                    history.pushState(null, null, `#${sectionId}`);
-                    activateSection(sectionId);
+                    const id = this.getAttribute('data-section');
+                    history.pushState(null, null, '#' + id);
+                    activateSection(id);
                 });
             });
-            
-            // Improved Snake Motion Animation for Slogan
-            const slogan = "One Thing Leads to Another. Everything is Connected.";
+
+            // ── Snake slogan animation ──
+            const sloganText = "One Thing Leads to Another. Everything is Connected.";
             const container = document.getElementById('animatedSlogan');
-            
             if (container) {
-                // Clear any existing content
                 container.innerHTML = '';
-                
-                // Split text into characters and wrap each in a span
-                slogan.split('').forEach((char, index) => {
+                sloganText.split('').forEach((char, i) => {
                     const span = document.createElement('span');
                     span.className = char === ' ' ? 'snake-char space' : 'snake-char';
                     span.textContent = char === ' ' ? '\u00A0' : char;
                     container.appendChild(span);
                 });
-                
-                // Function to activate snake motion
-                function startSnakeMotion() {
+
+                function startSnake() {
                     const chars = container.querySelectorAll('.snake-char');
-                    
-                    // Activate characters in sequence with a snake-like pattern
                     let delay = 0;
-                    chars.forEach((char, index) => {
+                    chars.forEach((char, i) => {
                         setTimeout(() => {
                             char.classList.add('animating');
-                            
-                            // Remove animating class after animation completes
-                            setTimeout(() => {
-                                char.classList.remove('animating');
-                            }, 1500); // Match the animation duration
+                            setTimeout(() => char.classList.remove('animating'), 1500);
                         }, delay);
-                        
-                        // Increase delay for each character to create wave effect
-                        delay += 80; // Reduced from 100 for smoother flow
+                        delay += 80;
                     });
-                    
-                    // Restart the animation after the full cycle
-                    setTimeout(startSnakeMotion, delay + 1500);
+                    setTimeout(startSnake, delay + 1600);
                 }
-                
-                // Start the snake motion
-                startSnakeMotion();
+                startSnake();
             }
-            
-            // Contact form submission
-            const contactForm = document.getElementById('contactForm');
-            const formStatus = document.getElementById('formStatus');
-            
-            if (contactForm) {
-                contactForm.addEventListener('submit', async function(e) {
+
+            // ── Contact form ──
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('formStatus');
+
+            if (form) {
+                form.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    
-                    // Disable submit button to prevent multiple submissions
-                    const submitBtn = contactForm.querySelector('.submit-btn');
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Sending...';
-                    
-                    // Collect form data
-                    const formData = new FormData(contactForm);
-                    
+                    const btn = form.querySelector('.submit-btn');
+                    btn.disabled = true;
+                    btn.textContent = 'Sending…';
+
+                    const data = new FormData(form);
+
                     try {
-                        const response = await fetch(contactForm.action, {
+                        const res = await fetch(form.action, {
                             method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
+                            body: data,
+                            headers: { 'Accept': 'application/json' }
                         });
-                        
-                        if (response.ok) {
-                            // Show success message
-                            formStatus.textContent = 'Thank you for your message! We will get back to you soon.';
-                            formStatus.className = 'form-status success';
-                            
-                            // Reset form
-                            contactForm.reset();
+                        if (res.ok) {
+                            status.textContent = 'Thank you for your message! We will get back to you soon.';
+                            status.className = 'form-status success';
+                            form.reset();
                         } else {
-                            throw new Error('Form submission failed');
+                            throw new Error('Submission failed');
                         }
-                    } catch (error) {
-                        // Show error message
-                        formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
-                        formStatus.className = 'form-status error';
+                    } catch (_) {
+                        status.textContent = 'Oops! There was a problem sending your message. Please try again.';
+                        status.className = 'form-status error';
                     } finally {
-                        // Re-enable submit button
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                        
-                        // Hide status message after 5 seconds
+                        btn.disabled = false;
+                        btn.textContent = 'Send Message';
                         setTimeout(() => {
-                            formStatus.className = 'form-status';
-                            formStatus.textContent = '';
+                            status.className = 'form-status';
+                            status.textContent = '';
                         }, 5000);
                     }
                 });
             }
+
         });
     </script>
+
 </body>
 </html>
